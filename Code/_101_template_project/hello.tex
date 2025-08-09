@@ -1,0 +1,37 @@
+% hello.tex
+
+% A document split 2 part: 
+%   + preamble (include package, declare setup for whole document)
+%   + document: main document wrap in \begin{document} and \end{document}
+%   * ignore: all content after document part will ignore
+
+
+% After setup PATH to TeXLive run: 
+
+%   mkdir -p ./build && \    # && continue execute next command if program return 0(ok) else ignore after &&
+%   pdflatex -output-directory="./build" hello.tex
+
+
+% This line is a command and tells LaTeX to use the
+% article document class. A document class file defines
+% the formatting, which in this case is a generic article
+% format
+\documentclass{article}
+
+
+% This line is the beginning of the environment called
+% document; it alerts LaTeX that content of the doc-
+% ument is about to commence. Anything above this
+% command is known generally to belong in the pream-
+% ble.
+\begin{document}
+
+
+% This was the only actual line containing real content -
+% the text that we wanted displayed on the page.
+hello world!
+
+% The document environment ends here. It tells LaTeX
+% that the document source is complete, anything after
+% this line will be ignored.
+\end{document}
