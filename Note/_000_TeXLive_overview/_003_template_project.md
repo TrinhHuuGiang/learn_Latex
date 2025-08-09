@@ -1,4 +1,5 @@
 ### Template LaTeX project
+- [Meaning of file extension](../_200_LaTeX_wikibook/_204_pick_files_to_tex.md)
 ```txt
 Project/
 │
@@ -39,7 +40,7 @@ Project/
 ├── build/                     # Auto gen
 │   └── (auto-generated files)
 │
-└── Makefile                   # (Option) Using make help check changes build automatic
+└── Makefile                   # (Option or using `latexmk`) Using make help check changes build automatic
 
 ```
 

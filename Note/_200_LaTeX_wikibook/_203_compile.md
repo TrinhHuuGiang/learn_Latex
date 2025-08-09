@@ -1,5 +1,8 @@
+#### Note
+- Output file name should not include space ` `, some TeX tools misunderstand and wrong behavior
+
 ## Basic compile and export a pdf
-- Below is a basic build command for Bash when build content only have some tex file implemented in `main_file.tex`
+- Below is a basic build command for Bash when build content only have some tex file implemented in `main_file.tex` but with some special file additon like `.bib` must have support tool `bibtex`. Better method using `latexmk` is convenient by automatic build.
 ```bash
     mkdir -p ./build && \    # && continue execute next command if program return 0(ok) else ignore after &&
     pdflatex -output-directory="./build" -jobname="OUTPUT_file_PDF"  main_file.tex
@@ -32,4 +35,10 @@ tlmgr: command log updated: /usr/local/texlive/2025/texmf-var/web2c/tlmgr-comman
 # re-check
 tlmgr list --only-installed | grep -i "latexmk"
 
+```
+
+- Build with `latexmk`
+```bash
+mkdir -p ./build && \
+latexmk --pdf -output-directory="./build" -jobname="OUTPUT_file_PDF"  main_file.tex
 ```
