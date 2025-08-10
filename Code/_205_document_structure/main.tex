@@ -2,9 +2,14 @@
 %                            ================================
 %                            Type doctument
 %                            - \documentclass[option]{class}
+%                            Other page setup
+%                            - geometry: set margin, should
+%                                similar with \documentclass
 %                            ================================
-\documentclass[12pt, a4paper]{book}
-
+\documentclass[12pt, a4paper]{report}
+% \usepackage[a5paper,inner=3cm,outer=2cm]{geometry} 
+% text seem larger (content a5 in a page a4)
+\usepackage[a4paper,inner=3cm,outer=2cm]{geometry}
 
 %============================================================
 % Preamble
@@ -12,8 +17,11 @@
 %       commands, environments
 % - Commands effect entire document
 %============================================================
-
-
+%                            ================================
+%                            Miscellaneous
+%                            - lipsum: lorem paragraph
+%                            ================================
+\usepackage{lipsum}
 
 
 
@@ -25,7 +33,49 @@
 %============================================================
 \begin{document}
 
-hello 
+%                            ================================
+%                            Title
+%                            ================================
+\title{Our Fun Document}
+\author{Bob \and Alice}
+\date{\today}
+\maketitle
 
+%                            ================================
+%                            Abstract
+%                            ================================
+\renewcommand{\abstractname}{New abstract \LaTeX{} title}
+\begin{abstract}
+
+    This is abstract
+    \lipsum[1]
+
+\end{abstract}
+
+
+%                            ================================
+%                            Content
+%                            ================================
+\newpage
+hello this is row 1\\This is row 2
+
+\newpage
+\lipsum[2]\\
+\lipsum[3]
+
+%                            ================================
+%                            Sectioning
+%                            ================================
+\part{This is a part title}
+\chapter{This is a chapter title}
+\section{This is a section title}
+\subsection{This is a sub section title}
+\subsubsection{This is a sub sub section title}
+\paragraph{This is a paragraph}
+\subparagraph{This is a sub paragraph}
+
+%                            ================================
+%                            END
+%                            ================================
 \end{document}
 

@@ -3,13 +3,34 @@
 
 ### List of common preamble
 #### List
-- [documentclass](#-documentclass)
+- [documentclass](#documentclass)
     - Standard type layout document
-- [usepackage]()
+- [usepackage](#usepackage)
+    - include packages enhance more ability for TeX:
+    - [lipsum]()
+        - auto generate some `lorem` sample paragraphs
+- [document environment](#document-environment)
+    - Common commands
+        - Line break [\\\\]()
+        - [\newpage]()
+    - The top matter [\maketitle]():
+        - [\title]()
+        - [\author]()
+            - [\and]()
+        - [\date]()
+    - Abstract environment
+        - Design for `artical` and `report` but not for `book`
+        - [\renewcommand{\abstractname}{New abstract title}]()
+    - [7 sectioning commands]()
+- [miscellaneous command]()
+    - [\LaTeX]()
+        - Only a special LaTeX word
+    - [\lipsum[m-n]]()
+        - Template paragraph if include package `lipsum`
 
-
-#### [^](#list) documentclass
-```txt
+#### documentclass
+[^list^](#list)
+```latex
 \documentclass[option]{class}
 ```
 - option:
@@ -37,7 +58,42 @@
     - IEEEtran (artical but IEEE transaction format)
 
 
-#### [^](#list) usepackage
-```txt
+#### usepackage
+[^list^](#list)
+
+```latex
 \usepackage[option]{package}
 ```
+
+
+#### document environment
+[^list^](#list)
+
+
+##### Common
+###### Line break
+[^list^](#list)
+```latex
+This is row 1\\This is row 2
+```
+
+##### Abstract environment
+[^list^](#list)
+```latex
+\begin{abstract}
+
+\end{abstract}
+```
+
+
+##### 7 sectioning commands
+[^list^](#list)
+|Command|Level|Comment|
+|-|-|-|
+|\part{title}|-1|not in letters|
+|\chapter{title}|0|only books and reports|
+|\section{title}|1|not in letters|
+|\subsection{title}|2|not in letters|
+|\subsubsection{title}|3|not in letters|
+|\paragraph{title}|4|not in letters|
+|\subparagraph{title}|5|not in letters|
