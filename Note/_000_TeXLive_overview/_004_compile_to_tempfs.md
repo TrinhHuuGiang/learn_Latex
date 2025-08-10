@@ -68,6 +68,18 @@ echo -e "\nTex check user tmpfs size"
 echo "[tex_fssize=$tex_fssize]"
 echo "tmpfs size: \$tex_fssize"
 
+
+# help
+tex_help=\
+"echo -e \nTex tools: ls \$texbin\n\
+Tex temporary folder: ls \$tex_tmpf\n\
+Tex check user tmpfs size: \$tex_fssize\n\
+\n\
+Build: latexmk --pdf -output-directory=\"\$tex_tmpf\" -jobname=\"OUTPUT_file_PDF\" main.tex\
+\n"
+
+echo -e "\n\nHELP: \$tex_help"
+
 ```
 
 ### Compile to temporary folder
