@@ -1,5 +1,5 @@
 ### Document structure
-- [Click to view](../../Code/_205_document_structure/main.tex)
+- [Click to view example](../../Code/_205_document_structure/main.tex)
 
 ### List of common preamble
 #### List
@@ -7,25 +7,42 @@
     - Standard type layout document
 - [usepackage](#usepackage)
     - include packages enhance more ability for TeX:
-    - [lipsum]()
+    - `lipsum`
         - auto generate some `lorem` sample paragraphs
 - [document environment](#document-environment)
     - Common commands
         - Line break [\\\\]()
-        - [\newpage]()
+        - `\newpage`
+        - `\tableofcontents`
+            - Change default title  `\renewcommand{\contentsname}{** Table of Contents **}`
+        - `\listoffigures`
+        - `\listoftables`
     - The top matter [\maketitle]():
-        - [\title]()
-        - [\author]()
-            - [\and]()
-        - [\date]()
+        - `\title{_typing_title_}`
+        - `\author{_typing_list_author_}`
+            - sub command `\and` if more than 1 author
+        - `\date{_typing_date_}`
+            - auto typing by subcommand `\today`
     - Abstract environment
         - Design for `artical` and `report` but not for `book`
-        - [\renewcommand{\abstractname}{New abstract title}]()
-    - [7 sectioning commands]()
-- [miscellaneous command]()
-    - [\LaTeX]()
+        - `\renewcommand{\abstractname}{New abstract title}`
+    - [7 sectioning commands](#7-sectioning-commands)
+        - Short display in TOC `\section_type[short title]{long title}`
+        - Set TOC display depth `\setcounter{tocdepth}{<level>}`
+        - Unnumber a section and dismiss from TOC `\section_type*{title}`
+            - Add a phantom anchor `\phantomsection` before `\addcontentsline...` below
+            - Add a Unnumber section into TOC `\addcontentsline{toc}{section_type}{title}`
+                - Usually using for `Opening` or `Conclusion`
+                - Purpose when using a `phantom` is help TOC identified where `title` place if section type is unnumber `*`
+    - Appendix `\appendix`:
+        - Pointing that now start appendix, all sections will distinguise by alphabet
+    - `\frontmatter`, `\mainmatter`, `\backmatter`
+        - Using for `book`, the front and back matter help hide numbering of tilte, make some title like `Opening` or `Cónlusion` seem better.
+        - In other `article` or `report` can using `phantom` and unnumbering title instead
+- miscellaneous command
+    - `\LaTeX`
         - Only a special LaTeX word
-    - [\lipsum[m-n]]()
+    - `\lipsum[m-n]`
         - Template paragraph if include package `lipsum`
 
 #### documentclass
