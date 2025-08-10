@@ -8,8 +8,15 @@
 
 % After setup PATH to TeXLive run: 
 
+%  Type 1: compile step by step ( other complex document include .bib and more steps needed to get the last PDF)
 %   mkdir -p ./build && \    # && continue execute next command if program return 0(ok) else ignore after &&
 %   pdflatex -output-directory="./build" hello.tex
+%   
+
+%  Type 2: automatic compile
+%   mkdir -p ./build && \
+%   latexmk --pdf -output-directory="./build" -jobname="OUTPUT_file_PDF"  main_file.tex
+%
 
 
 % This line is a command and tells LaTeX to use the

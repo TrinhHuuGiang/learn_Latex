@@ -148,6 +148,9 @@ There is NO warranty....
         echo -e "----------\n"
 
         #ok
+        texbin="/usr/local/texlive/2025/bin/x86_64-linux"
+        echo -e "[texbin=$texbin]"
+        echo -e "search: ls \$texbin"
         echo -e "Texlive setup OK\n"
 
     ```

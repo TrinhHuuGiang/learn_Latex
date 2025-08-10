@@ -38,3 +38,5 @@
         - xelatex:  support Unicode and fontstyle better than pdflatex
         - bibtex:   support Latex processing and linking references
         - dvipdfm:  convert .dvi (DeVice Independent file) format to .pdf(Portable Document Format - printable)
+    - Other tools:
+        - auto compile output file (pdf, ps, dvi,...): [latexmk](../_200_LaTeX_wikibook/_203_compile.md#automation-build-by-latexmk) 
