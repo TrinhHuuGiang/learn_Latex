@@ -1,0 +1,139 @@
+%                            ================================
+%                            [Type doctument]
+%                            - \documentclass[option]{class}
+%                            [Other page setup]
+%                            - geometry: set margin, should
+%                                similar with \documentclass
+%                            ================================
+\documentclass[12pt, a4paper]{report}
+\usepackage[a4paper,inner=3cm,outer=2cm]{geometry}
+
+%============================================================
+% Preamble
+% - Include packages allow expand ability of Texlive by more 
+%       commands, environments
+% - Commands effect entire document
+%============================================================
+%                            ================================
+%                            [Miscellaneous]
+%                            - lipsum: lorem paragraph
+%                            ================================
+\usepackage{lipsum}
+
+
+
+%============================================================
+% Document
+% - Plain text, list of tables, figures, input other tex, 
+%       bibilography, ...
+% - Commands with scope: in group
+% - Environments differ from 'document': 
+%       /begin{env} , /end{env}
+%============================================================
+\begin{document}
+
+%                                                        ================================
+%                                                        [Front matter]
+%                                                        2. Empty
+%                                                        3. Title page
+%                                                        4. Information (copyright notice, ISBN, etc.)
+%                                                        5. Dedication if any, else empty
+%                                                        6. Table of contents
+%                                                        7. List of figures (can be in the backmatter too)
+%                                                        8. Preface chapter
+%                                                        ================================
+
+
+%                            ================================
+%                            Title
+%                            ================================
+\title{Our Fun Document}
+\author{Boby \and Alice}
+\date{\today}
+\maketitle
+
+%                            ================================
+%                            Abstract
+%                            ================================
+\renewcommand{\abstractname}{New abstract \LaTeX{} title}
+\begin{abstract}
+
+    This is abstract
+    \lipsum[1]
+
+\end{abstract}
+
+
+%                            ================================
+%                            Table of contents
+%                            - TOC, LOF, LOT
+%                            ================================
+\renewcommand{\contentsname}{** Table of Contents **}
+\tableofcontents
+
+\renewcommand{\listtablename}{** List of Figures **}
+\renewcommand{\listfigurename}{** List of Tables **}
+\listoffigures
+\listoftables
+
+%                                                        ================================
+%                                                        [Main matter]
+%                                                        - Main topics
+%                                                        ================================
+\part{This is a part title}
+\chapter{This is a chapter title}
+\section[This is Short section title]{This is a section title}
+\subsection{This is a sub section title}
+\subsubsection{This is a sub sub section title}
+\paragraph{This is a paragraph}
+\subparagraph{This is a sub paragraph}
+
+
+% linespread
+\newpage
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+\linespread{1}\selectfont
+start normal linespread, factor 1\\
+\lipsum[1]\\
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+\linespread{0.4}\selectfont
+start linespread factor 0.4\\
+\lipsum[2]\\
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+\linespread{1.6}\selectfont
+start linespread factor 1.6\\
+\lipsum[3]\\
+
+
+
+
+%                                                        ================================
+%                                                        Appendix
+%                                                        - Subordinate chapters
+%                                                        ================================
+
+
+
+
+%                                                        ================================
+%                                                        Back matter
+%                                                        - Bibliography
+%                                                        - Glossary/Index
+%                                                        ================================
+
+
+
+
+
+
+
+%                            ================================
+%                            END
+%                            ================================
+\end{document}
+

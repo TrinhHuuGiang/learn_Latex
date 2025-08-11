@@ -36,7 +36,7 @@
                 - Purpose when using a `phantom` is help TOC identified where `title` place if section type is unnumber `*`
     - Appendix `\appendix`:
         - Pointing that now start appendix, all sections will distinguise by alphabet
-    - `\frontmatter`, `\mainmatter`, `\backmatter`
+    - [`\frontmatter`, `\mainmatter`, `\backmatter`](#page-order-for-book)
         - Using for `book`, the front and back matter help hide numbering of tilte, make some title like `Opening` or `Cónlusion` seem better.
         - In other `article` or `report` can using `phantom` and unnumbering title instead
 - miscellaneous command
@@ -114,3 +114,23 @@ This is row 1\\This is row 2
 |\subsubsection{title}|3|not in letters|
 |\paragraph{title}|4|not in letters|
 |\subparagraph{title}|5|not in letters|
+
+##### Page order for book
+- `\frontmatter`:
+```txt
+1. Half-title
+2. Empty
+3. Title page
+4. Information (copyright notice, ISBN, etc.)
+5. Dedication if any, else empty
+6. Table of contents
+7. List of figures (can be in the backmatter too)
+8. Preface chapter
+```
+- `\mainmatter`
+    - Typing main topic
+- `\appendix`
+    - Some subordinate chapters
+- `\backmatter`
+    - Bibliography
+    - Glossary/Index
