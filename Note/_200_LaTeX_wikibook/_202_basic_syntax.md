@@ -1,7 +1,9 @@
-#### 1. Space
+#### 1. Space, quote mark
 - Whitespace characters such as `space`, `tab`, and `single line breaks` are treated uniformly as spaces.
-- Only 1 linebreak is treated like a space but `multiple linebreak` are treated as end of paragraph
-
+    - Only 1 linebreak is treated like a space but `multiple linebreak` are treated as end of paragraph
+- Quote mark do not use `" " `, instead of it use:
+    - backtick `` ` `` combined with `'`
+    - double backtich ``` `` ``` combine with `''`
 #### 2. Reserved characters only using for command or math
 ```txt
 - command: # $ % ^ & _ { } ~ \
