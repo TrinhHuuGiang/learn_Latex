@@ -14,6 +14,8 @@
         - Line break `\\`
             - sometime compile say `There's no line here to end.`, fix like this `\hspace{0pt} \\`
             - Line break and extra verical space `\\[3pt]`, e.g. 3pt ~ 1mm, 1pt = 0.35mm
+            - Note that `\\` still in the same paragraph
+        - End paragraph: just input an blank line. 
         - `\newpage`
         - `\tableofcontents`
             - Change default title  `\renewcommand{\contentsname}{** Table of Contents **}`

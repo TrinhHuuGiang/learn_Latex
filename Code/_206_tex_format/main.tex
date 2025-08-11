@@ -15,13 +15,17 @@
 % - Commands effect entire document
 %============================================================
 %                            ================================
-%                            [Miscellaneous]
+%                            Package
 %                            - lipsum: lorem paragraph
+%                            Url
+%                            - hyperref: url
+%                            Color
+%                            - color
+%                            
 %                            ================================
 \usepackage{lipsum}
-
-
-
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
 %============================================================
 % Document
 % - Plain text, list of tables, figures, input other tex, 
@@ -135,6 +139,14 @@ here left \hfill Here central \hfill Here right\\
 \fbox{\lipsum[1]}\\
 \hbox{\lipsum[2]}\\
 
+% url
+Here is example url: \url{https://www.example-giangtrinh-1234.test/path/to/resources}\\
+
+% verb (verbatim on 1 line)
+Here is line verbatim: \verb=~!@#$%^&*()_=\\
+
+Here is another verb : \verb**hello(^_^)*\\ 
+
 
 % paragraph alignment
 \newpage
@@ -158,7 +170,7 @@ here left \hfill Here central \hfill Here right\\
 \lipsum[4]\\
 
 
-% verbatim 
+% verbatim  environment
 
 \begin{verbatim}
 hello `verbatim'
@@ -174,6 +186,40 @@ int main()
 
 bye `verbatim'
 \end{verbatim}
+
+
+
+% color test
+% "black", "white", "gray" x , "silver" x, 
+% "maroon" x, "red", "purple" x, 
+% "fuchsia" x, "green", "lime" x, "olive" x, 
+% "yellow", "navy" x, "blue", "teal" x, "aqua" x
+% => 6 color are accepted: black, white, red, green, yellow, blue
+\newpage
+
+This is color band for `color' package
+\textcolor{black}{black} 
+\textcolor{white}{white} white
+% \textcolor{gray}{gray} 
+% \textcolor{silver}{silver}
+% \textcolor{maroon}{maroon}
+\textcolor{red}{red} 
+% \textcolor{purple}{purple} 
+% \textcolor{fuchsia}{fuchsia}
+\textcolor{green}{green} 
+% \textcolor{lime}{lime}
+% \textcolor{olive}{olive} 
+\textcolor{yellow}{yellow}
+% \textcolor{navy}{navy} 
+\textcolor{blue}{blue}
+% \textcolor{teal}{teal} 
+% \textcolor{aqua}{aqua}
+
+This is test color with wide space
+
+\color{red}
+\lipsum[1]\\
+\color{black}
 
 %                                                        ================================
 %                                                        Appendix
