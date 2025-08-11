@@ -9,7 +9,7 @@
     - No-breaking, keep phrase together by `~`. E.g.: `H.~Giang` 
         - Another convenient command `\mbox{ nobreaking content }`
         - If you want a box cover content `\fbox{ nobreaking content }` instead
-    - Fill verical or horizontal by `black space`:
+    - Fill verical or horizontal by `blank space`:
         - `\vfill` will press the rest content to top and bottom
         - `\hfill` will press the rest content on both sides left and right
         - `\vspace{ unit }` add a space by vertical
@@ -28,7 +28,8 @@
 - Paragraph:
     - Alignment environment `flushleft`, `flushright`, `center` 
         - using with \begin{...} and \end{...}
-
+    - Verbatim text environment `\begin{verbatim}` `\end{verbatim}`
+        - when start until end this environment, all syntax will keep print raw, no complie. Very useful for coding text.
 #### linespread
 Using to set format line spread (or word spacing) from next content after call reload font command `\selectfont` 
 ```txt

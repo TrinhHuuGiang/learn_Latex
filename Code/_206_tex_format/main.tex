@@ -110,7 +110,7 @@ start linespread factor 1.6\\
 \lipsum[3]\\
 
 
-% vfill hfill
+% auto fill by: vfill hfill
 \linespread{1}\selectfont
 \newpage
 
@@ -129,14 +129,14 @@ here left \hfill Here central \hfill Here right\\
 \lipsum[2]
 
 
-% fbox hbox
+% no breaking sentence: fbox hbox
 \newpage 
 
 \fbox{\lipsum[1]}\\
 \hbox{\lipsum[2]}\\
 
 
-% alignment
+% paragraph alignment
 \newpage
 
 \begin{flushleft}
@@ -157,6 +157,23 @@ here left \hfill Here central \hfill Here right\\
 \vspace{1cm}Paragraph test done, return main page\\
 \lipsum[4]\\
 
+
+% verbatim 
+
+\begin{verbatim}
+hello `verbatim'
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main()
+{
+    fprintf(stderr,"Verbatim environment :v\n");
+    return 0;
+}
+
+bye `verbatim'
+\end{verbatim}
 
 %                                                        ================================
 %                                                        Appendix
