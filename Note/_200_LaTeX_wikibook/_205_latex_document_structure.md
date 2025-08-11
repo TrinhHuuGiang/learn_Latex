@@ -44,6 +44,7 @@
         - Only a special LaTeX word
     - `\lipsum[m-n]`
         - Template paragraph if include package `lipsum`
+    - `\ldots`: 3 dots `...`
 
 #### documentclass
 [^list^](#list)

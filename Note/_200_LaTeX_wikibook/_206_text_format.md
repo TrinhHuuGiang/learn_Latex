@@ -25,6 +25,9 @@
     - Package `babel`
     - Package `fontenc`
     - Package `inputenc`
+- Paragraph:
+    - Alignment environment `flushleft`, `flushright`, `center` 
+        - using with \begin{...} and \end{...}
 
 #### linespread
 Using to set format line spread (or word spacing) from next content after call reload font command `\selectfont` 
