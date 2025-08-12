@@ -2,7 +2,7 @@
 - [linespread](https://tex.stackexchange.com/questions/61155/linespacing-without-packages)
 
 ### Topic
-Include: line, tex, paragraph format. Some color package
+Include: line, text, paragraph format. Some color package and guide to set font, size of text
 - Line format
     - Expand line spacing [\linespread](#linespread)
         - Sub command reload font `\selectfont`
@@ -128,3 +128,21 @@ Using to set format line spread (or word spacing) from next content after call r
     % type something english
     ...
 ```
+
+
+
+#### font style
+|Style| describe|
+|-|-|
+|\texnormal{...}| set text to default normal font, style, bold, size,...|
+|\textup{...}| set text upright but keep current characteristic |
+|\textit{...}| Set italic shape, rotate character but format shape seem natural |
+|\textsl{...}| set slanted shape, only rotate character |
+|\textsc{...}| Set small capital, a character have normal shape but is upper case |
+|\uppercase{...}| Set uppercase size |
+|\textbf{...}| Set text bold|
+|\textmd{...}| medium weight, bettween normal and bold|
+|\textlf{...}| (Only for xelatex, lualatex) light weight, text size is thinner normal|
+|\textrm{...}| set Roman shape in font family, each character have `Serif - a small sharp on foot`, best for document|
+|\textsf{...}| set Sans Serif in font family, `Sans == not` in French, best for slide|
+|\texttt{...}| set Type writter in font family, best for implement code or computer language or monospace document|
