@@ -1,5 +1,6 @@
 ### References
 - [linespread](https://tex.stackexchange.com/questions/61155/linespacing-without-packages)
+- [extsize classes](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.overleaf.com/learn/latex/Questions/How_do_I_adjust_the_font_size%253F&ved=2ahUKEwjwwMCjuYWPAxWTYPUHHb4-JHQQFnoECBcQAQ&usg=AOvVaw11kO0yK0BlSS2N-NtmtzGJ)
 
 ### Topic
 Include: line, text, paragraph format. Some color package and guide to set font, size of text
@@ -66,9 +67,13 @@ Include: line, text, paragraph format. Some color package and guide to set font,
             - `\fontshape` : it=italic, n=normal, sl=slanted, sc=small capitals
         - Note always callback `\selectfont` to update change
 
-    - Font style: [Table of font style]
+    - Font style: [Table of font style](#font-style)
 
-    - Font size: [Table of font size ]
+    - Font size: [Table of font size ](#font-size)
+        - Latex default support 10pt, 11pt, 12pt for readable document file artical, report, book.
+        - To use extra size can use [extsizes option](#extra-size-for-page) 
+            - Ext: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt and 20pt. 
+            - Refer [extra size](#references)
 
 #### linespread
 Using to set format line spread (or word spacing) from next content after call reload font command `\selectfont` 
@@ -146,3 +151,13 @@ Using to set format line spread (or word spacing) from next content after call r
 |\textrm{...}| set Roman shape in font family, each character have `Serif - a small sharp on foot`, best for document|
 |\textsf{...}| set Sans Serif in font family, `Sans == not` in French, best for slide|
 |\texttt{...}| set Type writter in font family, best for implement code or computer language or monospace document|
+
+
+#### font size
+
+##### extra size for page
+- Set extra size by primary command `\documentclass`[`font_normal_size`, `paper_type`]{`ext_document_type`}
+    - Where `font_normal_size` include: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt and 20pt
+    - `paper_type`: refer [document class](./_205_latex_document_structure.md#documentclass)
+    - `ext_document_type`: just add `ext` before original document type, refer [document class](./_205_latex_document_structure.md#documentclass)
+        - e.g.: extarticle, extbook, extreport , ...
