@@ -5,7 +5,7 @@
 %                            - geometry: set margin, should
 %                                similar with \documentclass
 %                            ================================
-\documentclass[12pt, a4paper]{report}
+\documentclass[12pt, a4paper]{report} 
 \usepackage[a4paper,inner=3cm,outer=2cm]{geometry}
 
 %============================================================
@@ -21,11 +21,20 @@
 %                            - hyperref: url
 %                            Color
 %                            - color
-%                            
+%                            Language format
+%                            - inputenc, fontenc, babel
+%                            - lmodern: Latin modern
 %                            ================================
 \usepackage{lipsum}
 \usepackage[hidelinks]{hyperref}
 \usepackage{color}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5,T1]{fontenc}
+\usepackage{lmodern} % a Latin font version enhance from
+                        % cm-supper + vector format + better support T1,T5
+\usepackage[vietnamese, english]{babel} 
 %============================================================
 % Document
 % - Plain text, list of tables, figures, input other tex, 
@@ -220,6 +229,36 @@ This is test color with wide space
 \color{red}
 \lipsum[1]\\
 \color{black}
+
+
+% color box: colorbox, fcolorbox
+This is \colorbox{green}{\lipsum[1]} and below is fcolorbox\\
+This is \fcolorbox{red}{yellow}{\lipsum[2]}\\
+
+
+% test vietnames
+\newpage
+
+\selectlanguage{vietnamese}
+\fontencoding{T5}
+\selectfont
+
+\textcolor{blue}
+{
+Người Việt Nam có thói quen tổ chức ăn uống chung.
+Vì vậy các thành viên trong bữa ăn có quan hệ mật thiết và phụ thuộc nhau.
+Điều này khác với phương Tây, vì mọi người đều có bữa ăn của riêng mình,
+mọi người hoàn toàn độc lập với nhau. Họ ngược lại nên thích nói chuyện trong bữa ăn, 
+trái ngược với người phương Tây tránh nói chuyện khi dùng bữa. 
+Người Việt Nam không ăn quá nhanh hoặc quá chậm. Người Việt Nam không ăn quá nhiều hoặc quá ít.
+Họ dùng đũa khi ăn và dùng cơm là một trong những lương thực chính. 
+Các kiểu nấu ăn phổ biến nhất là luộc, xào, hấp hoặc hầm ...
+Món ăn Việt Nam có xu hướng không nhiều dầu mỡ vì họ sử dụng tối thiểu dầu cho các món ăn của mình. 
+Bữa ăn thông thường nhất là sự kết hợp của các loại thịt, cá và rau, rau thơm. 
+Hầu hết các bữa ăn đều có thêm nước mắm hoặc nước tương.
+Thức ăn thường được đặt ở giữa bàn. Người ít tuổi phải mời người lớn tuổi trước khi ăn.
+Xem thêm tại: https://loigiaihay.com/bai-tap-310466.html
+}
 
 %                                                        ================================
 %                                                        Appendix
