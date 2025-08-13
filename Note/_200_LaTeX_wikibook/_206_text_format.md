@@ -1,6 +1,7 @@
 ### References
 - [linespread](https://tex.stackexchange.com/questions/61155/linespacing-without-packages)
 - [extsize classes](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.overleaf.com/learn/latex/Questions/How_do_I_adjust_the_font_size%253F&ved=2ahUKEwjwwMCjuYWPAxWTYPUHHb4-JHQQFnoECBcQAQ&usg=AOvVaw11kO0yK0BlSS2N-NtmtzGJ)
+- [xcolor list](https://www.overleaf.com/learn/latex/Using_colors_in_LaTeX)
 
 ### Topic
 Include: line, text, paragraph format. Some color package and guide to set font, size of text
@@ -37,11 +38,19 @@ Include: line, text, paragraph format. Some color package and guide to set font,
         - How to use: `\verb` + `key` + raw content + `key`. Where `key` is a visible character can input from keyboard and sure not exist in `raw content`
 
 - Color:
-    - Package `color` and `xcolor`. For convenient, i only test `color`, about `xcolor` and `design a color` [check wikibook from page 87](../../Doc/LaTeX_wikibook.pdf)
+    - Package `color` and `xcolor`. For convenient, i only test `color` and basic HTML `xcolor`, about `xcolor` [xcolor](https://www.overleaf.com/learn/latex/Using_colors_in_LaTeX) and `design a color` [check wikibook from page 87](../../Doc/LaTeX_wikibook.pdf)
         - `\color{color_name}` this command affect on group
         - `\textcolor{color_name}{text}` affect on `text`
-            - Basic color for pack `color` were checked with 16 HTML basic color
-            - 6 color are accepted: black, white, red, green, yellow, blue  
+            - Basic color for pack `xcolor` were checked supply optional `usenames` parameter for package before use: 
+                - 19 color are accepted for `xcolor`: 
+                    ```txt
+                        red, green, blue, cyan, magenta, yellow, black, white
+                    ```
+                - 8 color are accepted for `color`: 
+                    ```txt
+                        red, green, blue, cyan, magenta, yellow, black, white, gray, darkgray, lightgray,  
+                        brown, lime, olive, orange, pink, purple, teal, violet
+                    ```
         - Background color, note that `colorbox` and `fcolorbox` is unbreaking with paragraph like `\hbox` or `fbox`, any thing write 1 line
             - `\colorbox{back_color}{text}` suitable for phrase, short sentence or a not recommend is highlight a path of paragraph
             - `\fcolorbox{frame_color}{back_color}{text}` extra frame

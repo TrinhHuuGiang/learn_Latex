@@ -6,9 +6,12 @@
 - [table](#table)
     - Can require package `array` to format paragraph
     - `\arraybackslash` has to append when add format `>` for the last column `paragraph table spec` like `p{}`,`m{}`,`b{}`
+    - `\usepackage{graphicx}` to limit table size
+        - `\resizebox{width}{height}{object}`, size type can set `!` for auto resize
+        - Note: `resizebox` will scale size of text. Check the table after creating the appropriate font size yet.
+    - `\usepackage[table]{xcolor}` before add color for table
 - [parbox](#box)
-- [rotate]()
-
+    - support wrap sentences in a `paragraph box` and auto linebreak. Very use full when typing in table have cell is `l``c``r` type (Because default it no support multipleline).
 
 ### list
 - List can be added in another list
@@ -77,8 +80,30 @@ LaTeX using `tabular` environment for table
                         l | >{\bfseries}c | r | >{\centering}p{3cm} |
                         }
                     ```
+- Set color for `tabular row`, call command `\rowcolors` of pack `xcolor` before create `tabular` 
+    ```txt
+        \rowcolors{<''starting row''>}{<''odd color''>}{<''even color''>} 
+        
+        e.g.: 
+        \rowcolors{1}{yellow}{blue}
+        \begin{tabular}...
+    ```
+- Set size for table by `\usepackage{graphicx}`:
+    - `\resizebox{width}{height}{object}` help limit table size:
+        ```latex
+            \usepackage{graphicx}
+            % ...
+            \resizebox{8cm}{!} {
+            \begin{tabular}...
+            \end{tabular}
+            }
+        ```
+
+
+
 ### box
-
-
-### rorate environment
-
+```latex
+\parbox[position]{width}{content}
+```
+- `parbox` is a paragraph box has permanent width (unchanged), auto wrap sentences inside
+    - Optional `position`: `t` top, `c` center, `b` bottom position in curent row

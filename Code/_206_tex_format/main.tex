@@ -20,17 +20,18 @@
 %                            Url
 %                            - hyperref: url
 %                            Color
-%                            - color
+%                            - color, xcolor
 %                            Language format
 %                            - inputenc, fontenc, babel
 %                            - lmodern: Latin modern
 %                            Table
 %                            - array: format tabular row
+%                            - graphicx: table size
 %                            ================================
 \usepackage{lipsum}
 \usepackage[hidelinks]{hyperref}
-\usepackage{color}
-
+% \usepackage{color}
+\usepackage[table]{xcolor}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T5,T1]{fontenc}
@@ -40,6 +41,7 @@
 
 
 \usepackage{array}
+\usepackage{graphicx}
 
 %============================================================
 % Document
@@ -211,25 +213,50 @@ bye `verbatim'
 % => 6 color are accepted: black, white, red, green, yellow, blue
 \newpage
 
-This is color band for `color' package
-\textcolor{black}{black} 
-\textcolor{white}{white} white
-% \textcolor{gray}{gray} 
-% \textcolor{silver}{silver}
-% \textcolor{maroon}{maroon}
+This is 8 basic color band for `color' package\\
 \textcolor{red}{red} 
-% \textcolor{purple}{purple} 
-% \textcolor{fuchsia}{fuchsia}
 \textcolor{green}{green} 
-% \textcolor{lime}{lime}
+\textcolor{blue}{blue} 
+\textcolor{cyan}{cyan} 
+\textcolor{magenta}{magenta} 
+\textcolor{yellow}{yellow} 
+\textcolor{black}{black} 
+% \textcolor{gray}{gray} 
+\textcolor{white}{white} 
+% \textcolor{darkgray}{darkgray} 
+% \textcolor{lightgray}{lightgray}
+% \textcolor{brown}{brown} 
+% \textcolor{lime}{lime} 
 % \textcolor{olive}{olive} 
-\textcolor{yellow}{yellow}
-% \textcolor{navy}{navy} 
-\textcolor{blue}{blue}
+% \textcolor{orange}{orange} 
+% \textcolor{pink}{pink} 
+% \textcolor{purple}{purple} 
 % \textcolor{teal}{teal} 
-% \textcolor{aqua}{aqua}
+% \textcolor{violet}{teaviolet} 
 
-This is test color with wide space
+This is 19 basic color for `xcolor package'\\
+\textcolor{red}{red} 
+\textcolor{green}{green} 
+\textcolor{blue}{blue} 
+\textcolor{cyan}{cyan} 
+\textcolor{magenta}{magenta} 
+\textcolor{yellow}{yellow} 
+\textcolor{black}{black} 
+\textcolor{gray}{gray} 
+\textcolor{white}{white} 
+\textcolor{darkgray}{darkgray} 
+\textcolor{lightgray}{lightgray}
+\textcolor{brown}{brown} 
+\textcolor{lime}{lime} 
+\textcolor{olive}{olive} 
+\textcolor{orange}{orange} 
+\textcolor{pink}{pink} 
+\textcolor{purple}{purple} 
+\textcolor{teal}{teal} 
+\textcolor{violet}{violet} 
+
+
+This is test color with wide space\\
 
 \color{red}
 \lipsum[1]\\
@@ -323,27 +350,44 @@ This is \textsf{textsf}\\ This is \texttt{texttt}\\
 
 % table
 \newpage 
-\begin{tabular}{ | l | >{\bfseries}c | r | >{\centering}p{3cm} | >{\raggedleft}m{3cm} | >{\raggedright\arraybackslash}b{3cm} | }
 
-    \hline
+\rowcolors{1}{pink}{yellow}
 
-    \textbf{left} & \textit{center} & \textsc{right} & 
-    {p~paragraph\newline vertical top justified} &
-    {m~paragraph\newline vertical middle justified} &
-    {b~paragraph\newline vertical bottom justified} \\
-    
-    \cline{1-3}
+\resizebox{20cm}{!}
+{
 
-    a & b & c & d & e & f \\
+    \begin{tabular}{ | l | >{\bfseries}c | r | >{\centering}p{3cm} | >{\raggedleft}m{3cm} | >{\raggedright\arraybackslash}b{3cm} | }
 
-    \hline
+        \hline
 
-\end{tabular}
+        \textbf{left and bold} & \textit{center and italic} & \textsc{right and small capital} & 
+        {p~paragraph\newline vertical top justified} &
+        {m~paragraph\newline vertical middle justified} &
+        {b~paragraph\newline vertical bottom justified} \\
+        
+        \cline{1-3}
 
-\begin{tabular}{|l|l|} \hline
-    First Name: & Albert \\ \hline
-    Second Name: & Einstein \\ \hline
-\end{tabular}
+        a & b & c & d & e & f \\
+        a & b & c & d & e & f \\
+        a & b & c & d & e & f \\
+        a & b & c & d & e & f \\
+
+        \hline
+
+    \end{tabular}
+
+}
+
+\lipsum[1]
+
+% paragraph box
+\newpage
+
+\parbox{10cm}
+{
+    \hspace{1cm}\lipsum[1]
+}
+
 %                                                        ================================
 %                                                        Appendix
 %                                                        - Subordinate chapters
