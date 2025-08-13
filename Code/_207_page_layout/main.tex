@@ -1,0 +1,134 @@
+%                            ================================
+%                            [Type doctument]
+%                            - \documentclass[option]{class}
+%                            [Other page setup]
+%                            - geometry: set margin, should
+%                                similar with \documentclass
+%                            ================================
+\documentclass[12pt, a4paper]{report}
+\usepackage[a4paper,inner=3cm,outer=2cm]{geometry}
+
+%============================================================
+% Preamble
+% - Include packages allow expand ability of Texlive by more 
+%       commands, environments
+% - Commands effect entire document
+%============================================================
+%                            ================================
+%                            Package
+%                            - lipsum: lorem paragraph
+%                            Url
+%                            - hyperref: url
+%                            Color
+%                            - color, xcolor
+%                            Language format
+%                            - inputenc, fontenc, babel
+%                            - lmodern: Latin modern
+%                            Table
+%                            - array: format tabular row
+%                            - graphicx: table size
+%                            ================================
+\usepackage{lipsum}
+\usepackage[hidelinks]{hyperref}
+% \usepackage{color}
+\usepackage[table]{xcolor}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5,T1]{fontenc}
+\usepackage{lmodern} % a Latin font version enhance from
+                        % cm-supper + vector format + better support T1,T5
+\usepackage[vietnamese, english]{babel} 
+
+
+\usepackage{array}
+\usepackage{graphicx}
+
+%============================================================
+% Document
+% - Plain text, list of tables, figures, input other tex, 
+%       bibilography, ...
+% - Commands with scope: in group
+% - Environments differ from 'document': 
+%       /begin{env} , /end{env}
+%============================================================
+\begin{document}
+%                                                        ================================
+%                                                        [Front matter]
+%                                                        2. Empty
+%                                                        3. Title page
+%                                                        4. Information (copyright notice, ISBN, etc.)
+%                                                        5. Dedication if any, else empty
+%                                                        6. Table of contents
+%                                                        7. List of figures (can be in the backmatter too)
+%                                                        8. Preface chapter
+%                                                        ================================
+
+
+%                            ================================
+%                            Title
+%                            ================================
+
+\title{The Triangulation of Titling Data in Non-Linear Gaussian Fashion via $\rho$ Series}
+\date{October 31, 2014}
+\author
+{
+    John Doe\\ Magic Department, Richard Miles University \and Richard Row,
+    \LaTeX\ Academy
+    
+    \thanks{Funded by NASA Grant \#42}
+}
+
+
+
+\maketitle
+%                            ================================
+%                            Abstract
+%                            ================================
+
+
+
+
+
+%                            ================================
+%                            Table of contents
+%                            - TOC, LOF, LOT
+%                            ================================
+
+
+
+%                                                        ================================
+%                                                        [Main matter]
+%                                                        - Main topics
+%                                                        ================================
+
+
+
+
+
+
+
+%                                                        ================================
+%                                                        Appendix
+%                                                        - Subordinate chapters
+%                                                        ================================
+
+
+
+
+%                                                        ================================
+%                                                        Back matter
+%                                                        - Bibliography
+%                                                        - Glossary/Index
+%                                                        ================================
+
+
+
+
+
+
+
+%                            ================================
+%                            END
+%                            ================================
+\end{document}
+
