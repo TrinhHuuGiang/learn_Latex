@@ -2,9 +2,17 @@
 - [Title page](#title-page)
     - [Standard title](#standard-titles)
     - Custom title: this is quit complicate, we can use frepared topic about textformat, container ... to modify content field `\title` or `author`
-- [Page layout]
-
-
+- [Page layout](#page-layout)
+    - Command `documentclass` setup document type layout. [Lookback](./_205_latex_document_structure.md#documentclass)
+        - Option `oneside` make document have the same margin and dont care put chapter or part on which page.
+        - Option `twoside` make document have toggle margin (set by `inner` and `outer` of pack `geometry`), any part, chapter will on the `odd page - right page` if it exist on `left page` so a blank page will be inserted
+    - [Page demention (size)](#page-demention)
+        - Package `geometry` help set page layout and choose right paper type, some document type like `article` has use `geometry` to set paper to A4, otherwise `documentclass` alway set it to `US letter`.
+    - [Page margin](#page-margin)
+- Page multi column
+    - Default support upto 2 column: `\documentclass[twocolumn]{article}`
+    - Use package `multicolumn` up to 10 column
+    
 ### Title page
 
 #### Standard titles
@@ -19,3 +27,23 @@
         - With `artical` title page on the same page with main content
         - With `book` and `report` title page is implement independence on first page.
     
+### Page layout
+
+#### Page demention 
+```latex
+    \documentclass[a4paper]{article} % article and suggest a4paper for geometry but still be US letter
+    \usepackage[a4paper,]{geometry}   % set a4paper
+```
+- Package `geometry` still support some page size:
+    ```txt
+    • a0paper, a1paper, ..., a6paper,
+    • b0paper, b1paper, ..., b6paper,
+    • letterpaper,
+    • legalpaper,
+    • executivepaper.
+    ```
+#### Page margin
+- Package `geometry` still support some page margin for document:
+    ```txt
+    \usepackage[top=1in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
+    ```
