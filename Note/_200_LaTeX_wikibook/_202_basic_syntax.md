@@ -37,7 +37,7 @@
 #### 4. Environment syntax
 - An environment has syntax:
 ```txt
-\begin{environment_name}
+\begin{environment_name}[optional]{compulsory}
 
 Content is influenced typing here
 
@@ -47,6 +47,7 @@ Content is influenced typing here
     ```latex
     % declare, inclue new environment
         % this is advance content, no more mentioned here
+
 
     % start document environment
     \begin{document}

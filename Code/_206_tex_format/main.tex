@@ -24,6 +24,8 @@
 %                            Language format
 %                            - inputenc, fontenc, babel
 %                            - lmodern: Latin modern
+%                            Table
+%                            - array: format tabular row
 %                            ================================
 \usepackage{lipsum}
 \usepackage[hidelinks]{hyperref}
@@ -35,6 +37,9 @@
 \usepackage{lmodern} % a Latin font version enhance from
                         % cm-supper + vector format + better support T1,T5
 \usepackage[vietnamese, english]{babel} 
+
+
+\usepackage{array}
 
 %============================================================
 % Document
@@ -316,7 +321,29 @@ This is \textsf{textsf}\\ This is \texttt{texttt}\\
 \end{itemize}
 
 
+% table
+\newpage 
+\begin{tabular}{ | l | >{\bfseries}c | r | >{\centering}p{3cm} | >{\raggedleft}m{3cm} | >{\raggedright\arraybackslash}b{3cm} | }
 
+    \hline
+
+    \textbf{left} & \textit{center} & \textsc{right} & 
+    {p~paragraph\newline vertical top justified} &
+    {m~paragraph\newline vertical middle justified} &
+    {b~paragraph\newline vertical bottom justified} \\
+    
+    \cline{1-3}
+
+    a & b & c & d & e & f \\
+
+    \hline
+
+\end{tabular}
+
+\begin{tabular}{|l|l|} \hline
+    First Name: & Albert \\ \hline
+    Second Name: & Einstein \\ \hline
+\end{tabular}
 %                                                        ================================
 %                                                        Appendix
 %                                                        - Subordinate chapters
