@@ -8,6 +8,7 @@
     - `\arraybackslash` has to append when add format `>` for the last column `paragraph table spec` like `p{}`,`m{}`,`b{}`
     - `\usepackage{graphicx}` to limit table size
         - `\resizebox{width}{height}{object}`, size type can set `!` for auto resize
+            - Special if width or height is negative, table will draw mirror
         - Note: `resizebox` will scale size of text. Check the table after creating the appropriate font size yet.
     - `\usepackage[table]{xcolor}` before add color for table
 - [parbox](#box)

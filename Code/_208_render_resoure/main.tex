@@ -1,0 +1,157 @@
+%                            ================================
+%                            [Type doctument]
+%                            - \documentclass[option]{class}
+%                            [Other page setup]
+%                            - geometry: set margin, should
+%                                similar with \documentclass
+%                            ================================
+\documentclass[12pt, a4paper, twoside]{report}
+\usepackage[a4paper,inner=3cm,outer=2cm]{geometry}
+
+%============================================================
+% Preamble
+% - Include packages allow expand ability of Texlive by more 
+%       commands, environments
+% - Commands effect entire document
+%============================================================
+%                            ================================
+%                            Package
+%                            - lipsum: lorem paragraph
+%                            Url
+%                            - hyperref: url
+%                            Color
+%                            - color, xcolor
+%                            Language format
+%                            - inputenc, fontenc, babel
+%                            - lmodern: Latin modern
+%                            Table
+%                            - array: format tabular row
+%                            - graphicx: table size
+%                            Render basic
+%                            - rotating: rotate object 
+%                                       (static or float)
+%                            - rotfloat: addition float rotating
+%                            ================================
+\usepackage{lipsum}
+\usepackage[hidelinks]{hyperref}
+% \usepackage{color}
+\usepackage[table]{xcolor}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5,T1]{fontenc}
+\usepackage{lmodern} % a Latin font version enhance from
+                        % cm-supper + vector format + better support T1,T5
+\usepackage[vietnamese, english]{babel} 
+
+
+\usepackage{array}
+\usepackage{graphicx}
+
+
+\usepackage{rotating}
+\usepackage{rotfloat}
+
+%============================================================
+% Document
+% - Plain text, list of tables, figures, input other tex, 
+%       bibilography, ...
+% - Commands with scope: in group
+% - Environments differ from 'document': 
+%       /begin{env} , /end{env}
+%============================================================
+\begin{document}
+%                                                        ================================
+%                                                        [Front matter]
+%                                                        2. Empty
+%                                                        3. Title page
+%                                                        4. Information (copyright notice, ISBN, etc.)
+%                                                        5. Dedication if any, else empty
+%                                                        6. Table of contents
+%                                                        7. List of figures (can be in the backmatter too)
+%                                                        8. Preface chapter
+%                                                        ================================
+
+
+%                            ================================
+%                            Title
+%                            ================================
+
+%                            ================================
+%                            Abstract
+%                            ================================
+
+%                            ================================
+%                            Table of contents
+%                            - TOC, LOF, LOT
+%                            ================================
+
+
+
+%                                                        ================================
+%                                                        [Main matter]
+%                                                        - Main topics
+%                                                        ================================
+
+% rotating
+
+
+% \begin{sideways}
+\begin{sideways}
+    \parbox{10cm}
+    {
+        \lipsum[1]\\
+        
+        \lipsum[2]
+    }
+
+
+    \parbox{10cm}
+    {
+        \lipsum[2]
+    }
+
+\end{sideways}
+
+
+% \begin{turn}{counter clock angle}
+\newpage
+
+\begin{turn}{45}
+    \parbox{10cm}
+    {
+        \lipsum[1]\\
+        
+        \lipsum[2]
+    }
+
+
+    \parbox{10cm}
+    {
+        \lipsum[2]
+    }
+
+\end{turn}
+
+
+
+
+%                                                        ================================
+%                                                        Appendix
+%                                                        - Subordinate chapters
+%                                                        ================================
+
+%                                                        ================================
+%                                                        Back matter
+%                                                        - Bibliography
+%                                                        - Glossary/Index
+%                                                        ================================
+
+
+
+
+
+%                            ================================
+%                            END
+%                            ================================
+\end{document}
+
