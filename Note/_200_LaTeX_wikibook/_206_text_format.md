@@ -44,13 +44,15 @@ Include: line, text, paragraph format. Some color package and guide to set font,
             - Basic color for pack `xcolor` were checked supply optional `usenames` parameter for package before use: 
                 - 19 color are accepted for `xcolor`: 
                     ```txt
-                        red, green, blue, cyan, magenta, yellow, black, white
-                    ```
-                - 8 color are accepted for `color`: 
-                    ```txt
                         red, green, blue, cyan, magenta, yellow, black, white, gray, darkgray, lightgray,  
                         brown, lime, olive, orange, pink, purple, teal, violet
                     ```
+                - 8 color are accepted for `color`: 
+                    ```txt
+                        red, green, blue, cyan, magenta, yellow, black, white
+                    ```
+            - Table of color:
+                ![TOColor](./img/OLxcolorList.png)
         - Background color, note that `colorbox` and `fcolorbox` is unbreaking with paragraph like `\hbox` or `fbox`, any thing write 1 line
             - `\colorbox{back_color}{text}` suitable for phrase, short sentence or a not recommend is highlight a path of paragraph
             - `\fcolorbox{frame_color}{back_color}{text}` extra frame

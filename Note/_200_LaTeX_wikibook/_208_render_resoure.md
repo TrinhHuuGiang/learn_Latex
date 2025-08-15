@@ -25,7 +25,8 @@
                     \caption[list=false]{caption_title}
                 ```
         - Label and Reference :`\label`
-    - [Floating figure]() : comming soon
+    - [Floating figure](#floating-figure) :
+        - It quite similar with `table` but instead of write caption to LOT, it write to LOF and represent for [some image](#manage-image)
 
 - [Manage image](#manage-image)
     - Include package `graphicx` to render image
@@ -96,9 +97,23 @@
         - `H` here absolute require `float` package
 
 #### Floating figure
+- Floating figure specialized to use for `image` and `LOF`
+- Template:
+    ```latex
+        \begin{figure}[position specifier]
 
+            \centering % center or raggedleft or right 
 
-
+            \caption{This is higher caption for figure}
+            
+            \includegraphics[opt1, opt2, ...]{image_path}
+            
+            \caption{This is lower caption for figure}
+            \label{fig:myfirstfigure}
+        
+        \end{figure}
+    ```
+- Float `figure` has characteristics similar with `table` and `position specifier` can [refer above](#floating-table)
 
 ### Manage image
 - Include graphic require include at preamble pack `graphicx`, then include image:

@@ -14,4 +14,4 @@ Some stuff about Latex
 |[Text format](./Note/_200_LaTeX_wikibook/_206_text_format.md)| Characteristics of line, text, paragraph format. Some color package and guide to set font, style and size of text|
 |[Container](./Note/_200_LaTeX_wikibook/_206_container.md)|Include list, table, paragraph box|
 |[Page layout](./Note/_200_LaTeX_wikibook/_207_page_layout.md)|Custom title page, Page layout|
-|[Render resoures](./Note/_200_LaTeX_wikibook/_208_render_resoure.md)| Rotate environment|
+|[Render resoures](./Note/_200_LaTeX_wikibook/_208_render_resoure.md)| Rotate environment, float environment for table and image|

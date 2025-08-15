@@ -216,7 +216,26 @@
 
 \includegraphics[width=5cm, keepaspectratio=true, angle=20, scale=1.5]{./sunset.png} Scale factor 1.5\\
 
+% floating figure
+\newpage
 
+\begin{figure}[H]
+               
+    \centering
+
+    \caption{This is higher caption for figure}
+
+    \fcolorbox{black}{cyan}
+    {
+           
+        \includegraphics[width=10cm]{./sunset.png}
+    }
+
+    \caption{This is lower caption for figure}
+
+    \label{fig:myfirstfigure}
+
+\end{figure}
 
 %                                                        ================================
 %                                                        Appendix
