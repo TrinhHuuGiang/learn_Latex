@@ -1,0 +1,167 @@
+%                            ================================
+%                            [Type doctument]
+%                            - \documentclass[option]{class}
+%                            [Other page setup]
+%                            - geometry: set margin, should
+%                                similar with \documentclass
+%                            ================================
+\documentclass[12pt, a4paper, twoside]{report}
+\usepackage[a4paper,inner=3cm,outer=2cm]{geometry}
+
+%============================================================
+% Preamble
+% - Include packages allow expand ability of Texlive by more 
+%       commands, environments
+% - Commands effect entire document
+%============================================================
+%                            ================================
+%                            Package
+%                            - lipsum: lorem paragraph
+%                            Url
+%                            - hyperref: url
+%                            Color
+%                            - color, xcolor
+%                            Language format
+%                            - inputenc, fontenc, babel
+%                            - lmodern: Latin modern
+%                            Table
+%                            - array: format tabular row
+%                            - graphicx: table size
+%                            Render basic
+%                            - rotating: rotate object 
+%                                       (static or float)
+%                            - rotfloat: addition float rotating
+%                            - float: addition H absolute position
+%                               for rotfloat or table, figure evironment
+%                            - graphicx: image like PNG, IMG, PDF
+%                            ================================
+\usepackage{lipsum}
+\usepackage[hidelinks]{hyperref}
+% \usepackage{color}
+\usepackage[table]{xcolor}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5,T1]{fontenc}
+\usepackage{lmodern} % a Latin font version enhance from
+                        % cm-supper + vector format + better support T1,T5
+\usepackage[vietnamese, english]{babel} 
+
+
+\usepackage{array}
+\usepackage{graphicx}
+
+
+\usepackage{rotating}
+\usepackage{rotfloat}
+
+\usepackage{float}
+
+\usepackage{graphicx}
+
+%============================================================
+% Document
+% - Plain text, list of tables, figures, input other tex, 
+%       bibilography, ...
+% - Commands with scope: in group
+% - Environments differ from 'document': 
+%       /begin{env} , /end{env}
+%============================================================
+\begin{document}
+%                                                        ================================
+%                                                        [Front matter]
+%                                                        2. Empty
+%                                                        3. Title page
+%                                                        4. Information (copyright notice, ISBN, etc.)
+%                                                        5. Dedication if any, else empty
+%                                                        6. Table of contents
+%                                                        7. List of figures (can be in the backmatter too)
+%                                                        8. Preface chapter
+%                                                        ================================
+
+
+%                            ================================
+%                            Title
+%                            ================================
+\title{\textbf{Hello\thanks{\LaTeX {} wikibook}}}
+\author{Giang Trinh\thanks{GitHub: \url{{https://github.com/TrinhHuuGiang}}}
+    \and others\thanks{No one}}
+\maketitle
+%                            ================================
+%                            Abstract
+%                            ================================
+
+%                            ================================
+%                            Table of contents
+%                            - TOC, LOF, LOT
+%                            ================================
+\tableofcontents
+\listoftables
+\listoffigures
+
+
+%                                                        ================================
+%                                                        [Main matter]
+%                                                        - Main topics
+%                                                        ================================
+\chapter{This is test chapter 1}
+    \label{chap: 1}
+\section{This is numbering section 1}
+    \label{sec: 1.1}
+
+\section*{This is unnumbering section, hiden from TOC}
+    \label{sec_u: 1.1_1}
+\section{This is numbering section 2}
+    \label{sec: 1.2}
+
+\phantomsection
+\addcontentsline{toc}{section}{This is title of unnumbering, sometime use for Openning, Preface}
+\section*{This is unnumbering section, show in TOC by phantomsectom, addcontentline}
+    \label{sec_u: 1.2_1}
+
+\section{This is numbering section 3}
+    \label{sec: 1.3}
+
+\section[This is short of section 4]{This is section 4}
+    \label{sec: 1.4}
+
+
+
+% test label and refer
+\chapter{This is chapter 2}
+    \label{chap: 2}
+
+List of refer to label:\\
+
+\begin{itemize}
+\item  Chapter \ref{chap: 1}, page \pageref{chap: 1}
+    \begin{itemize}
+        \item section \ref{sec: 1.1}, page \pageref{sec: 1.1}
+        \item section \ref{sec_u: 1.1_1}, page \pageref{sec: 1.1}
+        \item section \ref{sec: 1.2}, page \pageref{sec: 1.2}
+        \item section \ref{sec_u: 1.2_1}, page \pageref{sec_u: 1.2_1}
+        \item section \ref{sec: 1.3}, page \pageref{sec: 1.3}
+        \item section \ref{sec: 1.4}, page \pageref{sec: 1.4}
+    \end{itemize}
+\item  Chapter \ref{chap: 2}, page \pageref{chap: 2}
+\end{itemize}
+
+%                                                        ================================
+%                                                        Appendix
+%                                                        - Subordinate chapters
+%                                                        ================================
+
+%                                                        ================================
+%                                                        Back matter
+%                                                        - Bibliography
+%                                                        - Glossary/Index
+%                                                        ================================
+
+
+
+
+
+%                            ================================
+%                            END
+%                            ================================
+\end{document}
+

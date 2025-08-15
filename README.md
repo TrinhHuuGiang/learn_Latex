@@ -15,3 +15,4 @@ Some stuff about Latex
 |[Container](./Note/_200_LaTeX_wikibook/_206_container.md)|Include list, table, paragraph box|
 |[Page layout](./Note/_200_LaTeX_wikibook/_207_page_layout.md)|Custom title page, Page layout|
 |[Render resoures](./Note/_200_LaTeX_wikibook/_208_render_resoure.md)| Rotate environment, float environment for table and image|
+|[Link and cross referencing](./Note/_200_LaTeX_wikibook/_209_link_ref.md)| About implement an URL, footnote, or label and it cross-referencing|
