@@ -31,6 +31,8 @@
 %                            - rotating: rotate object 
 %                                       (static or float)
 %                            - rotfloat: addition float rotating
+%                            - float: addition H absolute position
+%                               for rotfloat or table, figure evironment
 %                            ================================
 \usepackage{lipsum}
 \usepackage[hidelinks]{hyperref}
@@ -50,6 +52,8 @@
 
 \usepackage{rotating}
 \usepackage{rotfloat}
+
+\usepackage{float}
 
 %============================================================
 % Document
@@ -75,7 +79,10 @@
 %                            ================================
 %                            Title
 %                            ================================
-
+\title{\textbf{Hello\thanks{\LaTeX {} wikibook}}}
+\author{Giang Trinh\thanks{GitHub: \url{{https://github.com/TrinhHuuGiang}}}
+    \and others\thanks{No one}}
+\maketitle
 %                            ================================
 %                            Abstract
 %                            ================================
@@ -84,16 +91,33 @@
 %                            Table of contents
 %                            - TOC, LOF, LOT
 %                            ================================
-
+\tableofcontents
+\listoftables
+\listoffigures
 
 
 %                                                        ================================
 %                                                        [Main matter]
 %                                                        - Main topics
 %                                                        ================================
+\chapter{This is test chapter}
+\section{This is numbering section 1}
+
+\section*{This is unnumbering section, hiden from TOC}
+\section{This is numbering section 2}
+
+\phantomsection
+\addcontentsline{toc}{section}{This is title of unnumbering, sometime use for Openning, Preface}
+\section*{This is unnumbering section, show in TOC by phantomsectom, addcontentline}
+
+\section{This is numbering section 3}
+
+\section[This is short of section 4]{This is section 4}
+
+
 
 % rotating
-
+\chapter{This is float environment example}
 
 % \begin{sideways}
 \begin{sideways}
@@ -103,7 +127,6 @@
         
         \lipsum[2]
     }
-
 
     \parbox{10cm}
     {
@@ -124,7 +147,6 @@
         \lipsum[2]
     }
 
-
     \parbox{10cm}
     {
         \lipsum[2]
@@ -132,6 +154,53 @@
 
 \end{turn}
 
+
+
+% Table environment / sidewaystable environment
+\newpage
+\rowcolors{1}{lightgray}{yellow}
+\setlength{\arrayrulewidth}{1pt}
+
+\begin{sidewaystable}[h]
+
+    \raggedleft
+
+    \caption{This is template table 1, caption top}
+
+    \begin{tabular}{|c|}
+        
+        \hline
+
+        \parbox{10cm}
+        {
+            \hspace{0pt} \\
+            \lipsum[1] \\
+        } \\
+
+        \hline
+
+        \parbox{10cm}
+        {
+            \hspace{0pt} \\
+            \lipsum[2] \\
+        } \\
+
+        \hline
+
+    \end{tabular}
+
+    \caption{This is template table 1, caption bottom}
+
+\end{sidewaystable}
+
+\textbf{\textcolor{red}{
+    Float table should be here but go `page for floats' because there is no space
+    }
+} \\
+
+\lipsum[1]\\
+\lipsum[1]\\
+\lipsum[1]\\
 
 
 

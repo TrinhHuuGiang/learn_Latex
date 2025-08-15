@@ -6,6 +6,7 @@
 - [table](#table)
     - Can require package `array` to format paragraph
     - `\arraybackslash` has to append when add format `>` for the last column `paragraph table spec` like `p{}`,`m{}`,`b{}`
+    - `\setlength{\arrayrulewidth}{2pt}` to set border width 
     - `\usepackage{graphicx}` to limit table size
         - `\resizebox{width}{height}{object}`, size type can set `!` for auto resize
             - Special if width or height is negative, table will draw mirror
