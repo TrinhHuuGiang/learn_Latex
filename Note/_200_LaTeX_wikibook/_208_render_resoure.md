@@ -7,12 +7,14 @@
 - [Rotating package](#rotate-an-object)
     - [Static rotate](#static-rotating)
         - pack `rotating` is the main rotate package
-    - [Rotate float environment]()
+    - [Rotate float environment](#float-rotating)
         - Download `tlmgr install rotfloat`
         - pack `rotfloat` add features for `rotating` package when manipulate with float environment.
         - Alway include `rotating` before `rotfloat` otherwise float control maybe ineffective
             - `rotfloat` expand rotate ability for float object `table` and `figure` below by supply 2 float environment `sidewaystable` and `sidewaysfigure`
     - Package `float` need if we want dock `table` of `figure` at current position by `H` option
+    - As package designed, `Static rotating` keep rotate by CCW (12->9..), but `sidewaystable` and `sidewaysfigure` rotate CW 90 degree.
+    - We can rotate `tabular` by `static rotate` before rotate whole `caption` and `tabular` 90 degree by `sidewaystable` and `sidewaysfigure`.
 
 - [Float object](#float)
     - [Floating table](#floating-table) support table type and:
@@ -23,6 +25,12 @@
                     \caption[list=false]{caption_title}
                 ```
         - Label and Reference :`\label`
+    - [Floating figure]() : comming soon
+
+- [Manage image](#manage-image)
+    - Include package `graphicx` to render image
+    - `pdflatex` support 3 basic type raster image: `PDF, PND, JPG`. This disadvantage make picture seen not natural when zoom out image can be broken
+
 
 ### Rotate an object
 - Package `rotating`: support rotate any static environment of an arbitrary angle.
@@ -33,7 +41,7 @@
 \usepackage{rotating}
 ```
 - Package `rotating` support 3 environment:
-    - ``\begin{sideways}`` it rotate whole inside by 90 degrees counterclocwise (12->9->6->3)
+    - `\begin{sideways}` it rotate whole inside by 90 degrees counterclocwise (12->9->6->3)
     - `\begin{turn}{30}` it rotate 30 degrees from -360 -> +360
 - Rotate should apply on box or parbox or some environment, if apply on raw paragraph it seem like:
     ![rotate test paragraph](./img/rotate)
@@ -89,3 +97,20 @@
 
 #### Floating figure
 
+
+
+
+### Manage image
+- Include graphic require include at preamble pack `graphicx`, then include image:
+    ```latex
+    \includegraphics[opt1, opt2, ...]{image_path}
+    ```
+    - List of common option:
+        |option|purpose||option|purpose|
+        |-|-|-|-|-|
+        |width=|`size` width of rendering image||height=|`size` height of rendering image|
+        |keepaspectratio=|`true, false` keep aspect as old image||scale=|`factor`, 0.5 for half area,<br> 2 for double area|
+        |angle=|`degrees` rotate by degrees||trim=|`l b r t` is length supply for crop image|
+        |clip=|`true, false`||page=|`number`, use choose page of PDF format|
+        |resolution=|`dpi`, dot per inch <br> higher seem better but smaller||||
+        

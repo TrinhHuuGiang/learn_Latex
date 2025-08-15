@@ -33,6 +33,7 @@
 %                            - rotfloat: addition float rotating
 %                            - float: addition H absolute position
 %                               for rotfloat or table, figure evironment
+%                            - graphicx: image like PNG, IMG, PDF
 %                            ================================
 \usepackage{lipsum}
 \usepackage[hidelinks]{hyperref}
@@ -54,6 +55,8 @@
 \usepackage{rotfloat}
 
 \usepackage{float}
+
+\usepackage{graphicx}
 
 %============================================================
 % Document
@@ -161,33 +164,35 @@
 \rowcolors{1}{lightgray}{yellow}
 \setlength{\arrayrulewidth}{1pt}
 
-\begin{sidewaystable}[h]
+\begin{sidewaystable}[htbp]
 
     \raggedleft
 
     \caption{This is template table 1, caption top}
 
-    \begin{tabular}{|c|}
-        
-        \hline
+    \begin{turn}{30}
+        \begin{tabular}{|c|}
+            
+            \hline
 
-        \parbox{10cm}
-        {
-            \hspace{0pt} \\
-            \lipsum[1] \\
-        } \\
+            \parbox{10cm}
+            {
+                \hspace{0pt} \\
+                \lipsum[1] \\
+            } \\
 
-        \hline
+            \hline
 
-        \parbox{10cm}
-        {
-            \hspace{0pt} \\
-            \lipsum[2] \\
-        } \\
+            \parbox{10cm}
+            {
+                \hspace{0pt} \\
+                \lipsum[2] \\
+            } \\
 
-        \hline
+            \hline
 
-    \end{tabular}
+        \end{tabular}
+    \end{turn}
 
     \caption{This is template table 1, caption bottom}
 
@@ -201,6 +206,15 @@
 \lipsum[1]\\
 \lipsum[1]\\
 \lipsum[1]\\
+
+% rendering image
+
+\newpage
+\includegraphics[width=5cm, keepaspectratio=true, angle=20]{./sunset.png} This is image width 5cm\\
+
+\includegraphics[width=5cm, keepaspectratio=true, angle=20, scale=0.5]{./sunset.png} Scale factor 0.5\\
+
+\includegraphics[width=5cm, keepaspectratio=true, angle=20, scale=1.5]{./sunset.png} Scale factor 1.5\\
 
 
 
