@@ -34,6 +34,7 @@ Include: line, text, paragraph format. Some color package and guide to set font,
         - using with \begin{...} and \end{...}
     - Verbatim text environment `\begin{verbatim}` `\end{verbatim}`
         - when start until end this environment, all syntax will keep print raw, no complie. Very useful for coding text.
+        - A disadvantage that this enviroment no auto linebreak, so if line too long will get overflow. Another convenient package is `listings` [will discuss here](../_200_LaTeX_wikibook/_211_coding_document.md)
     - `\verb` like verbatim but scope only 1 line
         - How to use: `\verb` + `key` + raw content + `key`. Where `key` is a visible character can input from keyboard and sure not exist in `raw content`
 
