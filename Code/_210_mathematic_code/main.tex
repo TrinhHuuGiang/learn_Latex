@@ -6,7 +6,7 @@
 %                                similar with \documentclass
 %                            ================================
 \documentclass[12pt, a4paper, twoside]{report}
-\usepackage[a4paper,inner=3cm,outer=2cm]{geometry}
+\usepackage[a4paper,inner=3cm,outer=2cm, top=2cm, bottom=2.5cm]{geometry}
 
 %============================================================
 % Preamble
@@ -37,6 +37,8 @@
 %                            Mathematic
 %                            - mathtools: include amsmath
 %                            - amssymb: expand math symbols
+%                            Sourcecode:
+%                            - listings
 %                            ================================
 \usepackage{lipsum}
 \usepackage[hidelinks]{hyperref}
@@ -63,6 +65,8 @@
 
 \usepackage{mathtools}
 \usepackage{amssymb}
+
+\usepackage{listings}
 
 %============================================================
 % Document
@@ -113,7 +117,7 @@
 %                                                        [Main matter]
 %                                                        - Main topics
 %                                                        ================================
-\chapter{This is test chapter 1}
+\chapter{This is test chapter: math}
 
 This is 2 plus implement by 2 displayed equation \verb` \{ \} `:
 \[
@@ -183,6 +187,14 @@ x = a_0 + \cfrac{1}{a_1
 + \cfrac{1}{a_2
 + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
 \end{equation}
+
+
+% code
+\chapter{This is test chapter: Code}
+
+\lstinputlisting[language=C,
+        numbers=left, firstnumber=10, stepnumber=2]{./sample.c}
+
 
 %                                                        ================================
 %                                                        Appendix

@@ -16,3 +16,7 @@ Some stuff about Latex
 |[Page layout](./Note/_200_LaTeX_wikibook/_207_page_layout.md)|Custom title page, Page layout|
 |[Render resoures](./Note/_200_LaTeX_wikibook/_208_render_resoure.md)| Rotate environment, float environment for table and image|
 |[Link and cross referencing](./Note/_200_LaTeX_wikibook/_209_link_ref.md)| About implement an URL, footnote, or label and it cross-referencing|
+|[Mathematic](./Note/_200_LaTeX_wikibook/_210_mathematic.md)||
+|[Code](./Note/_200_LaTeX_wikibook/_211_coding_document.md)| Write source code |
+|[Page](./Note/_200_LaTeX_wikibook/_212_special_page.md)||
+|[Document type](./Note/_200_LaTeX_wikibook/_213_special_document.md)||
