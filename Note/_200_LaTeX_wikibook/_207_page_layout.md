@@ -12,7 +12,16 @@
 - Page multi column
     - Default support upto 2 column: `\documentclass[twocolumn]{article}`
     - Use package `multicolumn` up to 10 column
-    
+
+- Header/Footer design
+    - By default LaTeX support 3 type design when use `\pagestyle{style}` for all page or `\thispagestyle{style}` for current page:
+        - Default is `plain`: header is cleaned, `footer` has page number at center.
+        - `headings` make `footer` blank, while header display information like section name and page number at top right.
+        - User custom by hand with `myheadings`. See [wikibook](../../Doc/LaTeX_wikibook.pdf) page 202.
+    - The `\pagestyle{style}` is a command so put it early at beginning document.  
+    - Advance design, the package `fancyhdr`, read more at wiki book.
+
+
 ### Title page
 
 #### Standard titles

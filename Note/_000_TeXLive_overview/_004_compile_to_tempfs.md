@@ -58,7 +58,7 @@ echo -e "Texlive setup OK\n"
 echo -e "\nTex tools"
 tex_bin="/usr/local/texlive/2025/bin/x86_64-linux"
 echo "[texbin=$tex_bin]"
-echo "search: ls \$texbin"
+echo "search: ls \$tex_bin"
 
 echo -e "\nTex temporary folder"
 echo "[tex_tmpf=$tex_tmpf]"
@@ -71,11 +71,28 @@ echo "tmpfs size: \$tex_fssize"
 
 # help
 tex_help=\
-"echo -e \nTex tools: ls \$texbin\n\
+"echo -e \nTex tools: ls \$tex_bin\n\
 Tex temporary folder: ls \$tex_tmpf\n\
 Tex check user tmpfs size: \$tex_fssize\n\
 \n\
-Build: latexmk --pdf -output-directory=\"\$tex_tmpf\" -jobname=\"OUTPUT_file_PDF\" main.tex\
+Build: latexmk --pdf -output-directory=\"\$tex_tmpf\" -jobname=\"OUTPUT_file_PDF\" main.tex\n\
+View: okular $tex_tmpf/OUTPUT_file_PDF.pdf\n\n\
+------------------------------------------\n\
+Some fix:\n\
+    - Abbreviation update: \n\
+        \t1. Build\n\
+        \t2. try \`makeindex\`\n\
+        \t\t    cd \"\$tex_tmpf\"\n\
+        \t\t    makeindex \"OUTPUT_file_PDF.nlo\" -s nomencl.ist -o \"OUTPUT_file_PDF.nls\"\n\
+        \t\t    cd - \n\
+        \t3. Retry Build\n\
+    - Glossary update: \n\
+        \t1. Build\n\
+        \t2. try \`makeglossaries\`\n\
+        \t\t    cd \"\$tex_tmpf\"\n\
+        \t\t    makeglossaries \"OUTPUT_file_PDF.glo\" \n\
+        \t\t    cd - \n\
+        \t3. Retry Build\
 \n"
 
 echo -e "\n\nHELP: \$tex_help"
