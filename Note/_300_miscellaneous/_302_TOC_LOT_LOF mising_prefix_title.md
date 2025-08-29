@@ -23,3 +23,18 @@
     \tocloftpagestyle{〈style〉}
 ```
 - By default `style` is `plain`
+- The `TOC` structure like below, LOT and LOF is similar:
+    ![ToC structure](./img/TOC_structure.png)
+
+##### 2. Command
+1. Set dots
+    - `\renewcommand{\cftdot}{.}`: by defaut the line `.` is buffer between title and page number.
+    - `\cftnodots`: disable dots buffer
+    - `\renewcommand{\cftdotsep}{width}` adjust distance of dots.
+        - `width` is a scale factor, no unit.
+        - `\cftnodots` is macro return 5000, this value completely like no dot.
+2. Set page number align
+    - `\cftsetpnumwidth{length}` see `ToC` structure above, it is limit for write page number.
+    - `\cftsetrmarg{length}` is limit of minimum space between title and right edge.
+        - Note: if `\cftsetpnumwidth` >= `\cftsetrmarg`, when title reach limit it can overwrite on page number.
+    - `\renewcommand{\cftpnumalign}{aligh}`, aligh here can be `l` `c` `r`. This method set align for page number

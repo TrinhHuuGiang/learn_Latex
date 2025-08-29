@@ -202,9 +202,25 @@
                     % ========================================
 % Style for TOC, LOF, LOT
 \tocloftpagestyle{plain}
-\renewcommand{\cftdot}{>}
-% \cftnodots % it don't want dot between
-    % title and number
+\renewcommand{\cftdot}{!}
+% Set dot separate distance
+% it don't want dot between
+% title and number set \cftnodots
+% \cftnodots return 5000
+% \renewcommand{\cftdotsep}{\cftnodots}
+\renewcommand{\cftdotsep}{10}
+
+% set ToC vertical space before entry
+\setlength{\cftbeforepartskip}{1cm}
+\setlength{\cftbeforechapskip}{2cm}
+\setlength{\cftbeforesecskip}{3cm}
+\setlength{\cftbeforesubsecskip}{4cm}
+
+% set ToC indent
+\setlength{\cftpartindent}{0pt}
+% \setlength{\cftchapindent}{0pt}
+\setlength{\cftsecindent}{30pt}
+\setlength{\cftsubsecindent}{60pt}
 
 % TOC
 \hspace{0pt}
@@ -282,6 +298,7 @@ Buổi chiều, bọn trẻ thường tụ tập ở đây để chơi đá bón
 
 Những âm thanh của cuộc sống bình dị, của tiếng chim hót, của tiếng gà gáy, của tiếng bò gặm cỏ, đã khắc sâu vào tâm trí tôi. Nó là nguồn động lực giúp tôi cố gắng học tập. Tôi mong muốn sau này trở thành một người có ích, xây dựng quê hương giàu đẹp.
 
+\subsection{check subsection}
 
 à ơ ê â ư đ
 
