@@ -71,6 +71,7 @@
     - `openright`, `openany`:
         - `openright` A chapter always begin at right page (odd page), if previous chapter end at right page, a blank page will be inserted
         - `openany` When writing a artical (no chapter) or some document don't care about chapter layout style 
+    - `twoside`, `oneside`: print book choose `twoside`, read pdf choose `oneside`
 - class:
     - artical(short report, program documentation, invitations,...)
     - report (longer report with several chapters, small books, thesis,... )
@@ -121,7 +122,7 @@ This is row 1\\This is row 2
 |\paragraph{title}|4|not in letters|
 |\subparagraph{title}|5|not in letters|
 
-##### Page order for book
+##### Page order for only book
 - `\frontmatter`:
 ```txt
 1. Half-title

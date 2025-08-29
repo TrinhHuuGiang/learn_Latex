@@ -126,16 +126,17 @@ Using to set format line spread (or word spacing) from next content after call r
 - In use, we can switch between declared list of languages
 ```latex
 \usepackage[utf8]{inputenc}
-\usepackage[T5,T1]{fontenc}
+\usepackage[T1,T5]{fontenc} % fontenc auto switch font encoder if missing encode
+                            % if T1 not available it fall to T5, or vice versa
 \usepackage[vietnamese, english]{babel} % include in preamble,
-% the last input is the main language active
+                                        % the last input is the main language active
 
 
 
 % then in document environment call command to swith main active 
 \selectlanguage{vietnamese} % babel
-\fontencoding{T5}           % fontenc
-\selectfont
+\fontencoding{T5}           % fontenc now fix encoder for T5 (disable auto)
+\selectfont  % update font encoder
     % type something vietnamese
 
 

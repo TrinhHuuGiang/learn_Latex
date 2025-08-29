@@ -118,8 +118,7 @@
 #### Declare new cite in file `.bib`
 - Syntax: 
     ```bibtex
-    @type
-    {   unique-cite-key %this is compulsory, unique and must be first
+    @type{unique-cite-key %this is compulsory, unique and must be first
         author = "Names of authors",
         title  = "Short title",
         year   = "year public",
@@ -127,6 +126,7 @@
         ...
     }
     ```
+    - Note that format has to : `@type{unique-key`,if any line break will wrong
 - some BibTeX entry type:
     - article, book, booklet, inbook, incollection,  
     inproceeding, manual, mastersthesis, phdthesis,  
@@ -152,7 +152,8 @@
     - alpha: sort by author and refor label `[short name+short year]` instead of `[1]` format
     - abstract: like alpha but `[name+year]`
     - acm: ACM standard
-    - ieeetr: sort by IEEE standard, like `unsrt` but layout `bibli part` has alittle different
+    - ieee: Display format `[1], [2]`, sort by IEEE standard, like `unsrt` but layout `bibli part` has alittle different
+    - ieeetr: better `ieee`
 
 - Standard templates
     1. @article
