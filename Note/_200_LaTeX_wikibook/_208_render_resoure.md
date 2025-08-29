@@ -128,4 +128,8 @@
         |angle=|`degrees` rotate by degrees||trim=|`l b r t` is length supply for crop image|
         |clip=|`true, false`||page=|`number`, use choose page of PDF format|
         |resolution=|`dpi`, dot per inch <br> higher seem better but smaller||||
-        
+    - Note: The `size` can be negative but `width` have result different `height`
+        - positive `width`: Draw from `0` to `+|size|` by horizontal axis
+        - negative `width`: Draw from `+|size|` to `0` by horizontal axis
+        - negative `height`: Draw from `0` down to `-|size|` by vertical axis
+        - positive `height`: Draw from `0` down to `+|size|` by vertical axis

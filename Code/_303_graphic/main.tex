@@ -65,7 +65,8 @@
                                         %           for the concepts in document
                                         %   Index part:
                                         %       - makeidx
-                                        %   
+                                        %   Basic calculator
+                                        %       - calc: + - * /
                                         % ========================================
                     % Template paragraphs
 \usepackage{lipsum}
@@ -112,9 +113,8 @@
 \usepackage{makeidx}
 \makeindex
 % \renewcommand{\indexname}{Alphabetical Index}
-
-
-
+                    % Basic Calculator
+\usepackage{calc}
 % ========================================
 % Main Document
 % ========================================
@@ -154,6 +154,38 @@
 % `footer' blank, `header' show section and page number
 \pagestyle{headings}
 % defaut background and foreground
+\AddToShipoutPictureBG
+{
+    % offset image width
+
+
+    % upper right
+    \put(\paperwidth - \paperwidth*1/5, \paperheight - \paperheight*1/5)
+    {
+        \includegraphics
+        [width=\paperwidth*1/5,height=\paperheight*1/5,keepaspectratio=false]
+        {sunset.png}
+    }
+    % upper left
+    \put(0pt, \paperheight - \paperheight*1/5)
+    {
+        \includegraphics
+        [width=\paperwidth*1/5,height=\paperheight*1/5,keepaspectratio=false]
+        {sunset.png}
+    }
+    % lower right
+    \put(\paperwidth - \paperwidth*1/5, 0pt)
+    {
+        \includegraphics
+        [width=\paperwidth*1/5,height=\paperheight*1/5,keepaspectratio=false]
+        {sunset.png}
+    }
+    % lower left
+    \put(0 , 0)
+    {
+        \includegraphics[width=\paperwidth*1/5,height=\paperheight*1/5,keepaspectratio=false]{sunset.png}
+    }
+}
 
 
 
@@ -201,7 +233,9 @@
                     % [Table of contents]
                     % ========================================
 % Style for TOC, LOF, LOT
-\tocloftpagestyle{plain}
+% \tocloftpagestyle{plain}
+\tocloftpagestyle{headings}
+% Set dot shape
 \renewcommand{\cftdot}{!}
 % Set dot separate distance
 % it don't want dot between
@@ -308,11 +342,11 @@ Những âm thanh của cuộc sống bình dị, của tiếng chim hót, của
 
 \newpage
 
-\lipsum[1] \cite{bib-unique-key}\\
+\lipsum[1] \cite{bib-unique-key}
 
-\lipsum[2]\\
+\lipsum[2]
 
-\lipsum[3]\\
+\lipsum[3]
 
                                         % ========================================
                                         % [Back matter]

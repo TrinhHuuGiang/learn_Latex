@@ -22,7 +22,7 @@
     % before TOC, LOT, LOF
     \tocloftpagestyle{〈style〉}
 ```
-- By default `style` is `plain`
+- By default `style` is `plain`, other is `heading`, `empty`. It similar with [`\pagestyle`](../_200_LaTeX_wikibook/_207_page_layout.md#topic)
 - The `TOC` structure like below, LOT and LOF is similar:
     ![ToC structure](./img/TOC_structure.png)
 
@@ -38,3 +38,9 @@
     - `\cftsetrmarg{length}` is limit of minimum space between title and right edge.
         - Note: if `\cftsetpnumwidth` >= `\cftsetrmarg`, when title reach limit it can overwrite on page number.
     - `\renewcommand{\cftpnumalign}{aligh}`, aligh here can be `l` `c` `r`. This method set align for page number
+        - Default is `r` right
+
+3. Set length for title:
+- Note: `X` maybe: part, chap, sec, subsec, subsubsec, para, subpara, fig, subfig, tab, subtan.
+- `\setlength{\cftbeforXskip}{pt/cm/...}` vertical space before entry
+- `\setlength{\cftXindent}{pt/cm/...}` set indent 
