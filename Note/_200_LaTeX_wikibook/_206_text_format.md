@@ -14,6 +14,7 @@ Include: line, text, paragraph format. Some color package and guide to set font,
         - If you want a box cover content `\fbox{ nobreaking content }` instead
         - If you want color see `Color` below for `colorbox` or `fcolorbox`
             - The `fbox` can change edge size by `\setlength{\fboxrule}{pt/cm/...}`
+            - The `fbox` can change padding from content to edge by `\setlength{\fboxsep}{pt/cm/...}`
     - Fill verical or horizontal by `blank space`:
         - `\vfill` will press the rest content to top and bottom
         - `\hfill` will press the rest content on both sides left and right
@@ -95,9 +96,9 @@ Using to set format line spread (or word spacing) from next content after call r
 \selectfont{}
 ```
 - LaTeX uses baseline (invisible line under text) as reference, not row height.
-    - `Line spacing` = distance between baselines.
+    - `baseline skip` = distance between baselines.
     - Default: `baseline skip`= 1.2 × font size.
-
+    - get `baseline skip` by `\baselineskip`
 - `\linespread{factor}` == `new spacing` = factor × (1.2 × font size).
 - Convert to Word spacing: Word_spacing ≈ factor × 1.2.
     - factor 1.3 → ≈ 1.56 (≈ 1.5 in Word)

@@ -10,6 +10,7 @@ REPORT
 |       +--- preamble/
 |       |       +--- preamble.tex   // Libraries and new defininitions
 |       |       +--- backup/
+|       |       +--- backup/
 |       +--- predefine/
 |       |       +--- glossary/      // Definition of Glossaries, selected at `backmatter`
 |       |       |       +--- gl01_Topic.tex
@@ -80,6 +81,11 @@ REPORT
 |               +--- index/   // design and dislay indexing
 |                      +--- index.tex
 |                      +--- backup/
+|
++--- resource/      // Resoure files
+|       +--- table/
+|       +--- figure/
+|       +--- ...
 |
 END
 ```

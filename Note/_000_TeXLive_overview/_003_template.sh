@@ -3,13 +3,13 @@
 save_point=""
 
 
-# main
+        # main
 save_point="_1_main"
 mkdir -p "$save_point/backup"
 touch "$save_point/cover.tex"
 touch "$save_point/main_doc.tex"
 
-
+        # structure
 
 # preamble
 save_point="_2_structure/_1_preamble"
@@ -92,3 +92,10 @@ touch "$save_point/bi01_topic_template.tex"
 save_point="_2_structure/_5_back_matter/_4_index"
 mkdir -p "$save_point/backup"
 touch "$save_point/index.tex"
+
+
+        # resource
+save_point="_3_resource"
+mkdir -p "$save_point"
+mkdir -p "$save_point/table"
+mkdir -p "$save_point/miscellaneous"

@@ -17,7 +17,7 @@
             - Note that `\\` still in the same paragraph
             - `\newline` no support `[pt]`
         - End paragraph: just input an blank line between 2 paragraph
-        - `\newpage` go newpage, `\noindent` for no indent
+        - `\newpage` go newpage, `\noindent` for no indent for next 1 paragraph
         - `\tableofcontents`
             - Change default title  `\renewcommand{\contentsname}{** Table of Contents **}`
         - `\listoffigures`

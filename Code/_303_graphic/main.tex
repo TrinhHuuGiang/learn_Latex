@@ -67,6 +67,7 @@
                                         %       - makeidx
                                         %   Basic calculator
                                         %       - calc: + - * /
+                                        %           group by `()'
                                         %   Basic graphic command
                                         %       - tikz: draw yourself
                                         % ========================================
@@ -364,21 +365,29 @@ Những âm thanh của cuộc sống bình dị, của tiếng chim hót, của
 
 
 
-% test tikz
+            % test tikz
 \newpage
 
-{
-\begin{center}   
-\fcolorbox{blue}{yellow}
-{
-\begin{tikzpicture}
-    \draw (-1.5,0) -- (1.5,0);
-    \draw (0,-1.5) -- (0,1.5);
-\end{tikzpicture}
-}
-\end{center}
-}
+\begin{center}
 
+\setlength{\arrayrulewidth}{1mm}
+\begin{tabular}[c]{|m{5cm}|m{2cm}|m{3cm}|}
+    \hline
+    \hspace{0pt}\newline
+    \begin{tikzpicture}
+        \draw (-15pt,0pt) -- (15pt,0pt);
+        \draw (0,-1.5) -- (0,1.5);
+    \end{tikzpicture}
+    &  &
+    This a cross inside a `fcolorbox'\\[\the\dimexpr\baselineskip/2\relax]
+    % \cline{2-2} % above \\[-1mm] % move next row higher 1mm 
+    \hline
+
+\end{tabular}
+
+\end{center}
+
+this is \the\dimexpr-\baselineskip/2\relax
 
 
 

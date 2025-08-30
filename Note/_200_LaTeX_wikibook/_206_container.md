@@ -65,7 +65,7 @@ LaTeX using `tabular` environment for table
         |symbol|purpose||symbol|purpose|
         |-|-|-|-|-|
         |`\\`| end old row, start new row||`\\`[pt,cm,mm,in,...]| start new row|
-        |`\hline`|add horizontal line||`\newline`| linebreak in a cell, suitable for paragraph|
+        |`\hline`|add horizontal line and don't need `\\`||`\newline`| linebreak in a cell, suitable for paragraph|
         |`\cline{i-j}`| only draw line from <br> col i to col j <br> i start from 1 ||`&`|column separate|
     - each `table spec` can cooperate with prefix `>{ format }`, where `format` can be:
         |format|purpose||format|purpose|
