@@ -16,8 +16,8 @@
             - Line break and extra verical space `\\[3pt]`, e.g. 3pt ~ 1mm, 1pt = 0.35mm
             - Note that `\\` still in the same paragraph
             - `\newline` no support `[pt]`
-        - End paragraph: just input an blank line. 
-        - `\newpage`
+        - End paragraph: just input an blank line between 2 paragraph
+        - `\newpage` go newpage, `\noindent` for no indent
         - `\tableofcontents`
             - Change default title  `\renewcommand{\contentsname}{** Table of Contents **}`
         - `\listoffigures`

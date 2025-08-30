@@ -13,6 +13,7 @@ Include: line, text, paragraph format. Some color package and guide to set font,
         - Another convenient command `\mbox{ nobreaking content }` == `hbox{ ... }`
         - If you want a box cover content `\fbox{ nobreaking content }` instead
         - If you want color see `Color` below for `colorbox` or `fcolorbox`
+            - The `fbox` can change edge size by `\setlength{\fboxrule}{pt/cm/...}`
     - Fill verical or horizontal by `blank space`:
         - `\vfill` will press the rest content to top and bottom
         - `\hfill` will press the rest content on both sides left and right

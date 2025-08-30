@@ -69,6 +69,7 @@ LaTeX using `tabular` environment for table
         |`\cline{i-j}`| only draw line from <br> col i to col j <br> i start from 1 ||`&`|column separate|
     - each `table spec` can cooperate with prefix `>{ format }`, where `format` can be:
         |format|purpose||format|purpose|
+        |-|-|-|-|-|
         |`\bfseries`| font bold||`\itshape`| italic shape|
         |`\centering`|||`\raggedleft`| put text to right, ragged left|
         |`\raggedright`| put text to left, ragged right||||
