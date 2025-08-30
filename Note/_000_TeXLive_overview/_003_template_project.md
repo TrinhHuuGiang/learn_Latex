@@ -110,68 +110,92 @@ END
 - result:
     ```bash
         .
-        ├── _003_template.sh
         ├── _1_main
-        │   ├── backup
-        │   ├── cover.tex
-        │   └── main_doc.tex
-        └── _2_structure
-            ├── _1_preamble
-            │   ├── backup
-            │   └── preamble.tex
-            ├── _2_predefine
-            │   ├── _1_glossary
-            │   │   ├── backup
-            │   │   └── gl01_Topic_template.tex
-            │   └── _2_page_style
-            │       ├── backup
-            │       └── page_style.tex
-            ├── _3_front_matter
-            │   ├── _1_title
-            │   │   ├── backup
-            │   │   └── title.tex
-            │   ├── _2_information
-            │   │   ├── backup
-            │   │   └── copyright_notice.tex
-            │   ├── _3_dedication
-            │   │   ├── acknowledgements.tex
-            │   │   ├── backup
-            │   │   └── dedication.tex
-            │   ├── _4_table_of_contents
-            │   │   ├── backup
-            │   │   └── table_of_contents.tex
-            │   ├── _5_abbreviation
-            │   │   ├── abbreviation.tex
-            │   │   └── backup
-            │   ├── _6_list_of_objects
-            │   │   ├── backup
-            │   │   ├── list_of_figures.tex
-            │   │   └── list_of_tables.tex
-            │   ├── _7_preface
-            │   │   ├── backup
-            │   │   └── preface.tex
-            │   └── _8_abstract
-            │       ├── abstract.tex
-            │       └── backup
-            ├── _4_main_matter
-            │   └── chapter01_topic_template
-            │       ├── backup
-            │       ├── sec01_topic_template.tex
-            │       └── summary.tex
-            └── _5_back_matter
-                ├── _1_appendix
-                │   └── section01_topic_template
-                │       ├── ap01_topic_template.tex
-                │       └── backup
-                ├── _2_glossary
-                │   ├── backup
-                │   └── print_glossary.tex
-                ├── _3_bibliography
-                │   ├── backup
-                │   ├── bi01_topic_template.tex
-                │   └── print_bibliography.tex
-                └── _4_index
-                    ├── backup
-                    └── index.tex
+        │   ├── backup
+        │   │   └── empty
+        │   ├── cover.tex
+        │   └── main_doc.tex
+        ├── _2_structure
+        │   ├── _1_preamble
+        │   │   ├── backup
+        │   │   │   └── empty
+        │   │   └── preamble.tex
+        │   ├── _2_predefine
+        │   │   ├── _1_glossary
+        │   │   │   ├── backup
+        │   │   │   │   └── empty
+        │   │   │   └── gl01_Topic_template.tex
+        │   │   └── _2_page_style
+        │   │       ├── backup
+        │   │       │   └── empty
+        │   │       └── page_style.tex
+        │   ├── _3_front_matter
+        │   │   ├── _1_title
+        │   │   │   ├── backup
+        │   │   │   │   └── empty
+        │   │   │   └── title.tex
+        │   │   ├── _2_information
+        │   │   │   ├── backup
+        │   │   │   │   └── empty
+        │   │   │   └── copyright_notice.tex
+        │   │   ├── _3_dedication
+        │   │   │   ├── acknowledgements.tex
+        │   │   │   ├── backup
+        │   │   │   │   └── empty
+        │   │   │   └── dedication.tex
+        │   │   ├── _4_table_of_contents
+        │   │   │   ├── backup
+        │   │   │   │   └── empty
+        │   │   │   └── table_of_contents.tex
+        │   │   ├── _5_abbreviation
+        │   │   │   ├── abbreviation.tex
+        │   │   │   └── backup
+        │   │   │       └── empty
+        │   │   ├── _6_list_of_objects
+        │   │   │   ├── backup
+        │   │   │   │   └── empty
+        │   │   │   ├── list_of_figures.tex
+        │   │   │   └── list_of_tables.tex
+        │   │   ├── _7_preface
+        │   │   │   ├── backup
+        │   │   │   │   └── empty
+        │   │   │   └── preface.tex
+        │   │   └── _8_abstract
+        │   │       ├── abstract.tex
+        │   │       └── backup
+        │   │           └── empty
+        │   ├── _4_main_matter
+        │   │   └── chapter01_topic_template
+        │   │       ├── backup
+        │   │       │   └── empty
+        │   │       ├── sec01_topic_template.tex
+        │   │       └── summary.tex
+        │   └── _5_back_matter
+        │       ├── _1_appendix
+        │       │   └── section01_topic_template
+        │       │       ├── ap01_topic_template.tex
+        │       │       └── backup
+        │       │           └── empty
+        │       ├── _2_glossary
+        │       │   ├── backup
+        │       │   │   └── empty
+        │       │   └── print_glossary.tex
+        │       ├── _3_bibliography
+        │       │   ├── backup
+        │       │   │   └── empty
+        │       │   ├── bi01_topic_template.tex
+        │       │   └── print_bibliography.tex
+        │       └── _4_index
+        │           ├── backup
+        │           │   └── empty
+        │           └── index.tex
+        └── _3_resource
+            ├── figure
+            │   └── empty
+            ├── miscellaneous
+            │   └── empty
+            └── table
+                └── empty
+
 
     ```
