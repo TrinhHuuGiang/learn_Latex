@@ -365,7 +365,7 @@ Những âm thanh của cuộc sống bình dị, của tiếng chim hót, của
 
 
 
-            % test tikz
+            % test tikz environment
 \newpage
 
 \begin{center}
@@ -387,7 +387,246 @@ Những âm thanh của cuộc sống bình dị, của tiếng chim hót, của
 
 \end{center}
 
-this is \the\dimexpr-\baselineskip/2\relax
+    % test tikz inline
+\textbf{Next}\\
+This is tikz inline: \tikz \draw (-1.5,0) -- (1.5,0) -- (0,-1.5) -- (0,1.5);
+
+    
+% test curve
+\vspace{\baselineskip*2}
+
+\textbf{Draw curve}
+
+\begin{tikzpicture}
+    \draw (-1.5,0) -- (1.5,0);
+    \draw (0,-1.5) -- (0,1.5);
+    \draw (-1,0) .. controls (-1,0.555) and (-0.555,1) .. (0,1)
+                .. controls (0.555,1) and (1,0.555) .. (1,0);
+\end{tikzpicture}
+
+    % test ellipse
+\vspace{\baselineskip*2}
+
+\textbf{Draw ellipse}
+
+\hfill
+\tikz \draw (0,0) ellipse [x radius=1cm, y radius=2cm];
+\hfill
+\tikz \draw (0,0) ellipse [x radius=1cm, y radius=1cm];
+\hfill \hspace{0pt}
+
+    % test rectangle and ellipse
+\vspace{\baselineskip*2}
+
+\textbf{Draw rectangle}
+
+\hfill
+\begin{tikzpicture}
+    \draw (0,0) ellipse [radius=1cm];
+    \draw (0,0)  rectangle (1,1);
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+    % test grid
+\newpage
+
+\textbf{Draw grid}
+
+\hfill
+\begin{tikzpicture}
+    \draw [step=0.5cm, dash pattern = on 1pt off 2.5mm - 1pt, line cap=round, red] (-3,-3) grid (3,3);
+    \draw [fill = blue!100, ultra thick] (0,0) ellipse [x radius=3cm, y radius=1cm];
+    \draw [fill = blue!50, ultra thick] (0,0) ellipse [x radius=1cm, y radius=3cm];
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+    % test arc
+\textbf{Draw arc}
+
+\hfill
+\begin{tikzpicture}
+    \draw [step = 0.5cm] (-2,-2) grid (2,2);
+    \draw (-1,1) -- (1,-1);
+    \draw [green, thick] (1,1) arc [start angle = 180, end angle = 0, radius = 1];
+    \draw [blue, thick] (1,1) arc [start angle = 0, end angle = -90, radius = 1];
+
+    \draw [purple, thick] (-1,-1) arc [start angle = 180, end angle = 0, x radius = 1, y radius = 2];
+        \draw [yellow, thick] (-1,-1) arc [start angle = 0, end angle = -90, x radius = 1, y radius = 2];
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+    % test clip
+\vspace{\baselineskip*2}
+
+\textbf{Draw clip}
+
+\hfill
+\begin{tikzpicture}[scale=3]
+\clip (-0.1,-0.2) rectangle (1.1,0.75);
+\draw[step=.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+\draw (-1.5,0) -- (1.5,0);
+\draw (0,-1.5) -- (0,1.5);
+\draw (0,0) circle [radius=1cm];
+\draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+\end{tikzpicture}
+\hfill
+\begin{tikzpicture}[scale=3]
+\clip[draw] (0.5,0.5) circle (.6cm);
+\draw[step=.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+\draw (-1.5,0) -- (1.5,0);
+\draw (0,-1.5) -- (0,1.5);
+\draw (0,0) circle [radius=1cm];
+\draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+        % test parabola, Sine
+\vspace{\baselineskip*2}
+
+\textbf{Draw geometry}
+
+\hfill
+\textit{parabola}
+\tikz \draw (0,0) rectangle (1,1) (0,0) parabola (1,1);
+\tikz \draw (1,0) parabola (0,1);
+\textit{parabola bend}
+\tikz \draw[x=1pt,y=1pt] (0,0) parabola bend (4,16) (6,12);
+\textit{sine and cosine}
+\tikz \draw[x=1.57ex,y=1ex] (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)
+                            (0,1) cos (1,0) sin (2,-1) cos (3,0) sin (4,1);
+\hfill \hspace{0pt}
+
+        % test parabola, Sine
+\vspace{\baselineskip*2}
+
+\textbf{Draw sine and cosine}
+
+\hfill
+\textit{sine from 0 to vertex 1}
+\tikz \draw (0,0) sin (1,1);
+\textit{cosine from vertex 1 to 0}
+\tikz \draw (0,1) cos (1,0);
+\hfill \hspace{0pt}
+
+\hfill
+\textit{sine from 0 down to vertex -1}
+\tikz \draw (0,0) sin (-1,-1);
+\textit{cosine from vertex 1 down to 0}
+\tikz \draw (1,1) cos (0,0);
+\hfill \hspace{0pt}
+
+        % test vector and shadow
+\newpage
+
+\textbf{Draw point, vector and gradient}
+
+\hfill
+\begin{tikzpicture}
+    \draw [thin, step = 0.5] (-2,-2) grid (2,2);
+    % origin point (1.0)
+    \draw [blue] (1,0) ellipse [radius = 1mm];
+    % after move around origin point
+    \draw [red, thick, ->] (1,0) -- + (1,1) -- + (-1,1);
+\end{tikzpicture}
+\hfill
+\begin{tikzpicture}
+    \draw [thin, step = 0.5] (-2,-2) grid (2,2);
+    % origin point (1.0)
+    \draw [blue] (1,0) ellipse [radius = 1mm];
+    % after move and update start point
+    \draw [red, thick, |->] (1,0) -- ++ (1,1) -- ++ (-1,1);
+\end{tikzpicture}
+\hfill
+\begin{tikzpicture}
+    \draw [thin, step = 0.5] (-2,-2) grid (2,2);
+    % origin point (1.0)
+    \shade [right color = yellow, left color = blue] (-1,0) ellipse [radius = 1cm];
+    \shade [top color = red!80, bottom color = green]  (1,0) ellipse [radius = 1cm];
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+
+        % vector by angle
+\vspace{\baselineskip*2}
+
+\textbf{Draw path with vector and and angle}
+
+\hfill
+\begin{tikzpicture}
+    % make grid
+    \draw [step=0.5cm, thin] (-5,-5) grid (2,2);
+
+    % draw a line with multiple rotate
+    \draw [blue,ultra thick, ||->>>, rounded corners = 2pt] (-4,-4) -- ++(20: 0.5cm) -- ++(60:1cm) -- ++(90: 2cm)
+        -- ++(-20: 1cm) -- ++(-30: 1cm) -- ++(-40: 1cm) -- ++(-50: 1cm) -- ++(-60: 1cm);
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+
+    % scope
+\vspace{\baselineskip*2}
+
+\textbf{Draw path with scope}
+
+\hfill
+\begin{tikzpicture}[draw = red,line width = 2mm]
+
+    \shade [draw] (-2,-2) rectangle (2,2);
+
+    \begin{scope}[thick]
+        
+        \draw (-1,0) -- (1,0);
+        
+    \end{scope}
+
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+        % foreach
+\vspace{\baselineskip*2}
+
+\textbf{Draw path with scope}
+
+\hfill
+\begin{tikzpicture}
+    \draw [step = 5mm] (0,0) grid (5,3);
+
+    \foreach \i in {1cm,2cm,3cm,4cm}
+    {
+        \foreach \j in {5mm, 10mm, 15mm, 20mm}
+        {
+            \draw [red] (\i,\j) ellipse [radius = 2mm];
+        }    
+    }
+\end{tikzpicture}
+\hfill \hspace{0pt}
+
+
+        % text
+\vspace{\baselineskip*2}
+
+\textbf{Draw text}
+
+\hfill
+\begin{tikzpicture}
+    \draw [step = 5mm] (0,0) grid (5,3);
+
+    \foreach \i in {1,2,3,4}
+    {
+        \foreach \j in {5, 10, 15, 20}
+        {
+            \draw [red] (\i cm,\j mm) ellipse [radius = 2mm];
+            \draw (\i cm,\j mm) node [shape=rectangle, anchor = west,
+                 text = red, rotate= 30]
+            {
+                \tiny
+                (\i;\j)
+            } ;
+        }
+    }
+
+\end{tikzpicture}
+\hfill \hspace{0pt}
 
 
 

@@ -18,6 +18,7 @@ Include: line, text, paragraph format. Some color package and guide to set font,
     - Fill verical or horizontal by `blank space`:
         - `\vfill` will press the rest content to top and bottom
         - `\hfill` will press the rest content on both sides left and right
+            - note if `\hfill` at the end, sometime need a `\hspace{0pt)`, else it will fill to infinity.
         - `\vspace{ unit }` add a space by vertical
             - Expand row height if unit `>` `baseline`
             - Pull the row higher if unit `<` 0, :v and also pull all backward rows higher
@@ -169,6 +170,8 @@ Using to set format line spread (or word spacing) from next content after call r
 
 
 #### font size
+![fontsize](./img/fontsize.png)
+
 
 ##### extra size for page
 - Set extra size by primary command `\documentclass`[`font_normal_size`, `paper_type`]{`ext_document_type`}
