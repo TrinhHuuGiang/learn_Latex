@@ -33,6 +33,11 @@ Include: line, text, paragraph format. Some color package and guide to set font,
         - package require `hyperref`.
             - Option `\usepackage[hidelinks]{hyperref}` to hide retangle line cover link.
 - Paragraph:
+    - Paragraph without indent `\noindent`
+    - Paragraph with indent modified [latex wiki book - section 22.3 - page 288](../../Doc/LaTeX_wikibook.pdf):
+        - `\setlength{\parindent}{15pt}` 
+    - Set paragraph space between paragraphs:
+        - `\setlength{\parskip}{6pt}`
     - Alignment environment `flushleft`, `flushright`, `center` 
         - using with \begin{...} and \end{...}
     - Verbatim text environment `\begin{verbatim}` `\end{verbatim}`
@@ -98,7 +103,7 @@ Using to set format line spread (or word spacing) from next content after call r
 ```
 - LaTeX uses baseline (invisible line under text) as reference, not row height.
     - `baseline skip` = distance between baselines.
-    - Default: `baseline skip`= 1.2 × font size.
+    - Default: `baseline skip`= 1.2 × font size (is square edge limit charater).
     - get `baseline skip` by `\baselineskip`
 - `\linespread{factor}` == `new spacing` = factor × (1.2 × font size).
 - Convert to Word spacing: Word_spacing ≈ factor × 1.2.
@@ -172,10 +177,15 @@ Using to set format line spread (or word spacing) from next content after call r
 #### font size
 ![fontsize](./img/fontsize.png)
 
-
 ##### extra size for page
 - Set extra size by primary command `\documentclass`[`font_normal_size`, `paper_type`]{`ext_document_type`}
     - Where `font_normal_size` include: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt and 20pt
     - `paper_type`: refer [document class](./_205_latex_document_structure.md#documentclass)
     - `ext_document_type`: just add `ext` before original document type, refer [document class](./_205_latex_document_structure.md#documentclass)
         - e.g.: extarticle, extbook, extreport , ...
+
+##### set base size only at runtime
+```latex
+\fontsize{<size>}{<baselineskip>}\selectfont
+```
+- The `baselineskip` should `>= 1.2`, can see more at [linespread](#linespread)

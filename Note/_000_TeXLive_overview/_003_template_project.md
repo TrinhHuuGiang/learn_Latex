@@ -25,11 +25,14 @@ REPORT
 |       |       |       +--- title.tex
 |       |       |       +--- backup/
 |       |       +--- information/   // necessary information
-|       |       |       +--- copyright_notice.tex
+|       |       |       +--- copyright_notice.tex  // copyright, edition, publisher...
 |       |       |       +--- backup/
 |       |       +--- dedication/
-|       |       |       +--- dedication.tex        // authors, groups
-|       |       |       +--- acknowledgements.tex  // notice from publisher
+|       |       |       +--- dedication.tex        // Dedication to someone
+|       |       |       +--- acknowledgements.tex  // Thanks to groups or individuals
+|       |       |       +--- backup/
+|       |       +--- preface/              // The purpose of the document , thanks to
+|       |       |       +--- preface.tex
 |       |       |       +--- backup/
 |       |       +--- table_of_contents/
 |       |       |       +--- table_of_contents.tex // design and display TOC
@@ -40,9 +43,6 @@ REPORT
 |       |       +--- list_of_objects/              // design and display LOT, LOF
 |       |       |       +--- list_of_tables.tex
 |       |       |       +--- list_of_figures.tex
-|       |       |       +--- backup/
-|       |       +--- preface/              // The purpose of the document , thanks to
-|       |       |       +--- preface.tex
 |       |       |       +--- backup/
 |       |       +--- abstract/             // Main content and summary of chapters
 |       |               +--- abstract.tex
