@@ -183,7 +183,7 @@ END
         │       ├── _3_bibliography
         │       │   ├── backup
         │       │   │   └── empty
-        │       │   ├── bi01_topic_template.tex
+        │       │   ├── bi01_topic_template.bib
         │       │   └── print_bibliography.tex
         │       └── _4_index
         │           ├── backup

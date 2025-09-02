@@ -103,7 +103,7 @@ save_point="_2_structure/_5_back_matter/_3_bibliography"
 mkdir -p "$save_point/backup"
 touch "$save_point/backup/empty"
 touch "$save_point/print_bibliography.tex"
-touch "$save_point/bi01_topic_template.tex"
+touch "$save_point/bi01_topic_template.bib"
 
 save_point="_2_structure/_5_back_matter/_4_index"
 mkdir -p "$save_point/backup"
