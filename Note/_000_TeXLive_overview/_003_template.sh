@@ -82,16 +82,16 @@ touch "$save_point/abstract.tex"
 save_point="_2_structure/_4_main_matter/chapter01_topic_template"
 mkdir -p "$save_point/backup"
 touch "$save_point/backup/empty"
-touch "$save_point/sec01_topic_template.tex"
+touch "$save_point/chapter01_topic_template.tex"
 touch "$save_point/summary.tex"
 
 
 
 # back matter
-save_point="_2_structure/_5_back_matter/_1_appendix/section01_topic_template"
+save_point="_2_structure/_5_back_matter/_1_appendix/appendix01_topic_template"
 mkdir -p "$save_point/backup"
 touch "$save_point/backup/empty"
-touch "$save_point/ap01_topic_template.tex"
+touch "$save_point/appendix01_topic_template.tex"
 
 
 save_point="_2_structure/_5_back_matter/_2_glossary"
