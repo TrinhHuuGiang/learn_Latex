@@ -38,3 +38,6 @@
     \theNameOfTheNewCounter
     ```
     - it will return default latex type for counter, may be arabic or others
+
+6. Some default counter:
+- This variable counters serving several numbering: `part, chapter, section, subsection, subsubsection, paragraph, subparagraph, page, figure, table, footnote, mpfootnote`
