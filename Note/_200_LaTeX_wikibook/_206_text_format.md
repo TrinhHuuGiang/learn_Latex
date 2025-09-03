@@ -158,20 +158,21 @@ Using to set format line spread (or word spacing) from next content after call r
 
 
 #### font style
-|Style| describe|
-|-|-|
-|\texnormal{...}| set text to default normal font, style, bold, size,...|
-|\textup{...}| set text upright but keep current characteristic |
-|\textit{...}| Set italic shape, rotate character but format shape seem natural |
-|\textsl{...}| set slanted shape, only rotate character |
-|\textsc{...}| Set small capital, a character have normal shape but is upper case |
-|\uppercase{...}| Set uppercase size |
-|\textbf{...}| Set text bold|
-|\textmd{...}| medium weight, bettween normal and bold|
-|\textlf{...}| (Only for xelatex, lualatex) light weight, text size is thinner normal|
-|\textrm{...}| set Roman shape in font family, each character have `Serif - a small sharp on foot`, best for document|
-|\textsf{...}| set Sans Serif in font family, `Sans == not` in French, best for slide|
-|\texttt{...}| set Type writter in font family, best for implement code or computer language or monospace document|
+|Local Style | In group | describe|
+|-|-|-|
+|\texnormal{...}|{\normalfont ...}| set text to default normal font, style, bold, size,...|
+|\textup{...}|{\upshape ...}| set text upright but keep current characteristic |
+|\textit{...}|{\itshape ...}| Set italic shape, rotate character but format shape seem natural |
+|\textsl{...}|{\slshape ...}| set slanted shape, only rotate character |
+|\emph{...}|{\em ...}| emphasis a text in sentence or paragrah, italic -> upright or reverse |
+|\textsc{...}|{\scshape ...}| Set small capital, a character have normal shape but is upper case |
+|\uppercase{...}|| Set uppercase size only for ASCII|
+|\textbf{...}|{\bfseries ...}| Set text bold|
+|\textmd{...}|{\mdseries ...}| medium weight, bettween normal and bold|
+|\textlf{...}|{\lfseries ...}| (Only for xelatex, lualatex) light weight, text size is thinner normal|
+|\textrm{...}|{\rmfamily ...}| set Roman shape in font family, each character have `Serif - a small sharp on foot`, best for document|
+|\textsf{...}|{\sffamily ...}| set Sans Serif in font family, `Sans == not` in French, best for slide|
+|\texttt{...}|{\ttfamily ...}| set Type writter in font family, best for implement code or computer language or monospace document|
 
 
 #### font size
