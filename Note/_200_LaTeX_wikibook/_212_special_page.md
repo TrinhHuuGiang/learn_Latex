@@ -46,6 +46,18 @@
     \nomenclature[⟨prefix⟩]{⟨symbol⟩}{⟨description⟩}
         % prefix using to group symbol in Table of abbreviations
     ```
+- Warn that \nomenclature alway cut out only 1 charactor of `prefix` and make it uppercase
+    - So the best choice is classify by A, B, C,... and define group title like this at top of the document
+    ```latex
+        % make group title for each prefix
+        \renewcommand{\nomgroup}[1]
+        {
+            \ifthenelse{\equal{#1}{I}}{\item[\textbf{Impressed images}]}{
+            \ifthenelse{\equal{#1}{M}}{\item[\textbf{Math symbols}]}{
+            }}
+        }
+        % #1 alway only 1 upper case character
+    ```
 - Compile has 3 step:
     ```bash
         latexmk --pdf -output-directory="$tex_tmpf" -jobname="OUTPUT_file_PDF" main.tex

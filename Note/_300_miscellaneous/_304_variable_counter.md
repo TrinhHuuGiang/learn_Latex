@@ -33,11 +33,12 @@
 |\Roman |I,II,III...|
 |\fnsymbol|A,B,C...|
 
-- Another kind is using `\the`:
+- Another kind is using `\the<counter>`:
     ```latex
     \theNameOfTheNewCounter
     ```
     - it will return default latex type for counter, may be arabic or others
+    - Note the in latex donot has a `\the` function, it only extra buildin when `\newcounter`
 
 6. Some default counter:
 - This variable counters serving several numbering: `part, chapter, section, subsection, subsubsection, paragraph, subparagraph, page, figure, table, footnote, mpfootnote`
