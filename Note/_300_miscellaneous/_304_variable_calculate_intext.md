@@ -2,12 +2,15 @@
     - ability: `+`, `-`, `*`, `/`
     - expression inline by `()`
         ```latex
-        \command
-        {(1pt+10pt)*2}
+        \command{(1pt+10pt)*2}
+
+        % never handle float value like 1.2, 5,7 , ...
+        % only handle integer value like: 1*12/10, return a float
         ```
     - Disadvantage:
         - no support calculate inside `[]`
         - some funtion like `\setfont{}{}` don't care `calc` operator, just use `\dimexpr` below
+        - Only handle **`integer`** 
 
 2. Using primitive command `\dimexpr` and `\relax`:
     - In some operator like `[]` is only accept simple input when `calc` not accepted. So we need using `\dimexpr` and `\relax`, it still support basic `+-*/`.
@@ -18,6 +21,8 @@
     ```
     - Disadvantage:
         - Need group expression in `\dimexpr` and `\relax`
+        - Only handle **`integer`** 
+
 
 3. command `\the` help convert any `dimension` variable (register) into `text with unit pt`
     - Some command like `\\[cm/pt/..]` it only accept a raw text with unit
