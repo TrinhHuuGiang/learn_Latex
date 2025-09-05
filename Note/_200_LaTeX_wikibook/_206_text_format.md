@@ -105,8 +105,7 @@ Using to set format line spread (or word spacing) from next content after call r
     - `baseline skip` = distance between baselines.
     - Default: `baseline skip`= 1.2 × font size (is square edge limit charater).
     - get `baseline skip` by `\baselineskip`
-- `\linespread{factor}` == `new spacing` = factor × (1.2 × font size).
-- Convert to Word spacing: Word_spacing ≈ factor × 1.2.
+- `\linespread{factor}` => `new baseline skip spacing` = factor × (1.2 × font size).
     - factor 1.3 → ≈ 1.56 (≈ 1.5 in Word)
     - factor 1.6 → ≈ 1.92 (≈ double in Word)
 
@@ -190,3 +189,4 @@ Using to set format line spread (or word spacing) from next content after call r
 \fontsize{<size>}{<baselineskip>}\selectfont
 ```
 - The `baselineskip` should `>= 1.2`, can see more at [linespread](#linespread)
+- **NOTE very importance:** `fontsize` only accept value or `\dimexpr` primitive expression, not handle raw expression like `+ - * /`

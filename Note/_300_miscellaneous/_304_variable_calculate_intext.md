@@ -5,7 +5,9 @@
         \command
         {(1pt+10pt)*2}
         ```
-    - Disadvantage: no support calculate inside `[]`
+    - Disadvantage:
+        - no support calculate inside `[]`
+        - some funtion like `\setfont{}{}` don't care `calc` operator, just use `\dimexpr` below
 
 2. Using primitive command `\dimexpr` and `\relax`:
     - In some operator like `[]` is only accept simple input when `calc` not accepted. So we need using `\dimexpr` and `\relax`, it still support basic `+-*/`.

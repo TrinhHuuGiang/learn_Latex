@@ -57,6 +57,7 @@
     - Line color: red, green,... support by `xcolor`
         - `red!20`, `red!60!blue` , `yelow!50!blue` is adjust density of color
     - Line shape: very thin, thin, semithick (default) , thick, ultra thick, `line width = 1pt`
+    - Line header: `line cap=`. With value `butt` for default cut to square but not fill when connect other line, `round` to make header rounded, `rect` make header like default but a little longer to fill connection
     - Fill color in closed curve: fill=red, ... by `xcolor`
     - Arrow and line: `->` `<-` `<->` `-|` `|-`  
         - Tips: more `>` or `|` like `||->>>`

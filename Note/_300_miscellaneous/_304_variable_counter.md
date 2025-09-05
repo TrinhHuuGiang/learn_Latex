@@ -38,7 +38,13 @@
     \theNameOfTheNewCounter
     ```
     - it will return default latex type for counter, may be arabic or others
-    - Note the in latex donot has a `\the` function, it only extra buildin when `\newcounter`
-
+    - `\the<counter>` generate with `\newcounter{<counter>}`
 6. Some default counter:
 - This variable counters serving several numbering: `part, chapter, section, subsection, subsubsection, paragraph, subparagraph, page, figure, table, footnote, mpfootnote`
+
+7. Get value of counter to calculate
+```latex
+\value{NameOfTheNewCounter}
+```
+- `\the<counter>` or `\arabic,...` only return text, it can't calulate
+- `value` return a integer type for expression
