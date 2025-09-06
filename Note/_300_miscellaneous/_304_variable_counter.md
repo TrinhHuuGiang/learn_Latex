@@ -15,7 +15,12 @@
     - number can be negative
 3. Count up using:
     ```latex
+        % count up for counter but not create reference for \label refer
         \stepcounter{NameOfTheNewCounter}
+
+        % another method create reference for begin count some sectioning*
+        \setcounter{NameOfTheNewCounter}{0}  % initialize counter 0
+        \refstepcounter{NameOfTheNewCounter} % set counter 1
     ```
 4. Count up or count down an amount:
     ```latex

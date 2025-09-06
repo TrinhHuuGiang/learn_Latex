@@ -14,5 +14,6 @@
 - Label and Cross-referencing
     - `\label{marker}`
         - `label` has to define in a countable environment, example `figure`, `table`, `equation`, or after set [7 type sectioning](./_205_latex_document_structure.md#7-sectioning-commands)
-    - `\ref{marker}` return number was numbered for the `countable environment` set by `\label{marker}`
-    - `\href{marker}` another return but return page number to `\label{marker}`
+    - `\ref{marker}` return number marker was numbered for the `countable environment` set by `\label{marker}`
+    - `\pageref{marker}` another return but return page number to `\label{marker}`
+    - `\hyperref[marker]{<description>}` return description marker refer to label
