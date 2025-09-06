@@ -98,7 +98,7 @@ View: okular $tex_tmpf/OUTPUT_file_PDF.pdf\n\n\
     \t1. Copy all file in gather folder to RAM tmpfs:\n\
     \t\t   (1)    cp link_to_folder/*.bib   \"\$tex_tmpf\"\n\
     \t\t   (2)    cp link\\ to\\ folder/*.bib \"\$tex_tmpf\"\n\
-    \t\t   (3)    cp \"link to folder\"*.bib  \"\$tex_tmpf\"\n\
+    \t\t   (3)    cp \"link to folder\"/*.bib  \"\$tex_tmpf\"\n\
     \t2. Build\n\
 \n"
 
