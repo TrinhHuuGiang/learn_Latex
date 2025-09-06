@@ -78,21 +78,28 @@ Tex check user tmpfs size: \$tex_fssize\n\
 Build: latexmk --pdf -output-directory=\"\$tex_tmpf\" -jobname=\"OUTPUT_file_PDF\" main.tex\n\
 View: okular $tex_tmpf/OUTPUT_file_PDF.pdf\n\n\
 ------------------------------------------\n\
-Some fix:\n\
-    - Abbreviation update: \n\
-        \t1. Build\n\
-        \t2. try \`makeindex\`\n\
-        \t\t    cd \"\$tex_tmpf\"\n\
-        \t\t    makeindex \"OUTPUT_file_PDF.nlo\" -s nomencl.ist -o \"OUTPUT_file_PDF.nls\"\n\
-        \t\t    cd - \n\
-        \t3. Retry Build\n\
-    - Glossary update: \n\
-        \t1. Build\n\
-        \t2. try \`makeglossaries\`\n\
-        \t\t    cd \"\$tex_tmpf\"\n\
-        \t\t    makeglossaries \"OUTPUT_file_PDF.glo\" \n\
-        \t\t    cd - \n\
-        \t3. Retry Build\
+===============  Some fix:================\n\
+1. Abbreviation update: \n\
+    \t1. Build\n\
+    \t2. try \`makeindex\`\n\
+    \t\t    cd \"\$tex_tmpf\"\n\
+    \t\t    makeindex \"OUTPUT_file_PDF.nlo\" -s nomencl.ist -o \"OUTPUT_file_PDF.nls\"\n\
+    \t\t    cd - \n\
+    \t3. Retry Build\n\
+2. Glossary update: \n\
+    \t1. Build\n\
+    \t2. try \`makeglossaries\`\n\
+    \t\t    cd \"\$tex_tmpf\"\n\
+    \t\t    makeglossaries \"OUTPUT_file_PDF.glo\" \n\
+    \t\t    cd - \n\
+    \t3. Retry Build\n\
+3. Bibliography update:\n\
+    **NOTE** this method only apply when all '.bib' files gather in 1 folder\n\
+    \t1. Copy all file in gather folder to RAM tmpfs:\n\
+    \t\t   (1)    cp link_to_folder/*.bib   \"\$tex_tmpf\"\n\
+    \t\t   (2)    cp link\\ to\\ folder/*.bib \"\$tex_tmpf\"\n\
+    \t\t   (3)    cp \"link to folder\"*.bib  \"\$tex_tmpf\"\n\
+    \t2. Build\n\
 \n"
 
 echo -e "\n\nHELP: \$tex_help"
