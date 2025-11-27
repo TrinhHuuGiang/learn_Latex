@@ -13,7 +13,7 @@
 ```bash
 #!/bin/bash
 # Giang Trinh, GitHub:https://github.com/TrinhHuuGiang
-
+# If run by terminal, `source` is required with this bash file: source ./this_bash.sh
 
 # Check default PATH
 echo "----------"
